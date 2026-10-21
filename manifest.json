@@ -1,8 +1,8 @@
 {
   "id": "unifort-hotsales-ajuda-pwa",
-  "name": "Central de Ajuda & Suporte | UniFort & HotSales",
-  "short_name": "UniFort Ajuda",
-  "description": "Guia de solução rápida de mensagens e diagnósticos do sistema UniFort & HotSales",
+  "name": "Tutorial",
+  "short_name": "Tutorial",
+  "description": "Universidade Unifort - Aprenda a utilizar. Descubra soluções. Simplifique suas tarefas.",
   "start_url": "./index.html?source=pwa",
   "scope": "./",
   "display": "standalone",

@@ -1,12 +1,13 @@
 /**
- * Service Worker - Central de Ajuda & Suporte | UniFort & HotSales
- * Suporte completo a Progressive Web App (PWA) e funcionamento offline
+ * Service Worker - Tutorial
+ * Suporte completo a Progressive Web App (PWA), atualizações automáticas e funcionamento offline
  */
 
-const CACHE_NAME = 'unifort-ajuda-v23';
+const CACHE_NAME = 'tutorial-app-v113';
 const STATIC_ASSETS = [
   './',
   './index.html',
+  './ead-treinamento.html',
   './styles.css',
   './app.js',
   './manifest.json',
@@ -17,12 +18,24 @@ const STATIC_ASSETS = [
   './assets/sinal_fraco_status.png',
   './assets/transportador_nao_encontrado.png',
   './assets/nenhuma_empresa_filial.png',
+  './assets/icons/icon-32x32.png',
+  './assets/icons/icon-64x64.png',
+  './assets/icons/icon-96x96.png',
+  './assets/icons/icon-144x144.png',
+  './assets/icons/icon-180x180.png',
   './assets/icons/icon-192x192.png',
   './assets/icons/icon-512x512.png',
   './assets/icons/icon-maskable-192x192.png',
   './assets/icons/icon-maskable-512x512.png',
   './assets/icons/apple-touch-icon.png'
 ];
+
+// Listener para forçar ativação imediata sob demanda (skipWaiting)
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});
 
 // Instalação do Service Worker e pré-armazenamento em cache dos arquivos estáticos
 self.addEventListener('install', (event) => {

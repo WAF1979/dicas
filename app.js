@@ -110,9 +110,9 @@ const HELP_DATA = [
     ],
     suggestions: [
       'Verifique a qualidade da sua **conexão local de internet**.',
-      'Caso seja possível, **teste conectar em outra rede** (ex: trocar do Wi-Fi para o 4G/5G).',
+      'Caso seja possível, **teste conectar em outra rede** (ex: trocar do Wi-Fi para dados móveis).',
       'Aguarde alguns segundos e torne a tentar o carregamento.',
-      'Caso esteja com urgência, utilize a versão web: [Site HotSales](https://webunifort.hotsales.com.br/#/login)'
+      'Em caso de urgência, acesse. [Site HotSales](https://webunifort.hotsales.com.br/#/login), **Atenção**: o sinal fraco também afeta o acesso pelo site. Em regiões com instabilidade, deixe o aplicativo no modo offline antes de sair.'
     ],
     showStoreBanner: false,
     tags: ['demora na atualização de dados', 'demora', 'carregando', 'validando produtos', 'atualizando preços', 'lento', 'conexão local', 'internet', 'wi-fi', 'validando', 'urgência', 'versão web', 'web']
@@ -251,7 +251,8 @@ const HELP_DATA = [
     suggestions: [
       '**Fechar o aplicativo e abrir novamente.**',
       '**Verificar versão do aplicativo**, se necessário atualizar na loja de apps [Play Store](https://play.google.com/store/apps/details?id=br.com.dynamicssales.dynamicssales&pcampaignid=web_share) ou [App Store](https://apps.apple.com/br/app/hotsales/id1413947343).',
-      '**Limpeza de cache e dados**, nas configurações do aparelho ([Como fazer a limpeza de cache](#cache-cleanup-guide)).'
+      '**Limpeza de cache e dados**, nas configurações do aparelho ([Como fazer a limpeza de cache](#cache-cleanup-guide)).',
+      'Em caso de urgência, acesse. [Site HotSales](https://webunifort.hotsales.com.br/#/login), **Atenção**: o sinal fraco também afeta o acesso pelo site. Em regiões com instabilidade, deixe o aplicativo no modo offline antes de sair.'
     ],
     showStoreBanner: true,
     tags: ['erro ao sincronizar', 'sincronizar', 'login novamente', 'sincronização', 'limpeza de cache', 'conexão', 'tentar login']
@@ -271,7 +272,7 @@ const HELP_DATA = [
     suggestions: [
       'No aplicativo, acesse: **Configurações** > **Sincronização** > **Forçar re-sincronização**.',
       'Aguarde a conclusão da re-sincronização (este procedimento pode demorar um pouco).',
-      'Em caso de urgência, acesse diretamente pelo site. [Site HotSales](https://webunifort.hotsales.com.br/#/login)'
+      'Em caso de urgência, acesse. [Site HotSales](https://webunifort.hotsales.com.br/#/login), **Atenção**: o sinal fraco também afeta o acesso pelo site. Em regiões com instabilidade, deixe o aplicativo no modo offline antes de sair.'
     ],
     showStoreBanner: false,
     tags: ['fazer uma re-sincronização', 're-sincronização', 'resincronizacao', 'sincronização', 'forçar', 'configurações', 'sincronizar', 'dados', 'urgência', 'web']
@@ -324,7 +325,7 @@ const HELP_DATA = [
     tags: ['limpeza de cache e dados do app', 'limpeza de cache', 'limpar cache', 'limpar dados', 'armazenamento', 'configurações do celular', 'android', 'corrompido', 'travando', 'youtube', 'vídeo']
   },
   {
-    id: 'nao-aparece-produtos',
+    id:'nao-aparece-produtos',
     category: 'conexao',
     categoryLabel: 'Conexão & Dados',
     badgeClass: 'badge-conexao',
@@ -450,7 +451,7 @@ const HELP_DATA = [
       '**Fechar o aplicativo e abrir novamente.**',
       '**Necessidade de atualizar:** acesse a loja e verifique se há atualizações disponíveis para o aplicativo ([Play Store](https://play.google.com/store/apps/details?id=br.com.dynamicssales.dynamicssales&pcampaignid=web_share) ou [App Store](https://apps.apple.com/br/app/hotsales/id1413947343)).',
       '**Limpar cache e dados:** realize o procedimento de limpeza nas configurações do aparelho ([Como fazer a limpeza de cache](#cache-cleanup-guide)).',
-      '**Em caso de urgência, acesse pela web:** [Site HotSales](https://webunifort.hotsales.com.br/#/login).'
+      'Em caso de urgência, acesse. [Site HotSales](https://webunifort.hotsales.com.br/#/login), **Anteção**: o sinal fraco também afeta o acesso pelo site. Em regiões com instabilidade, deixe o aplicativo no modo offline antes de sair.'
     ],
     showStoreBanner: true,
     tags: ['ocorreu um erro na operação', 'ocorreu um erro', 'erro na operacao', 'entre em contato com o administrador', 'administrador', 'conexão', 'internet', 'atualizar', 'play store', 'app store', 'limpar cache', 'urgência', 'web', 'erro']
@@ -472,100 +473,6 @@ const HELP_DATA = [
       '**Entrar em contato com o atendimento** para saber mais sobre a situação do pedido.'
     ],
     showStoreBanner: false,
-    tags: ['status hotsales, aguardando envio erp', 'status hotsales', 'aguardando envio erp', 'erro erp', 'status hotsales: erro erp', 'status hotsales erro erp', 'pedido', 'situação irregular', 'setor responsavel', 'atendimento', 'irregular']
-  },
-  {
-    id: 'video-uso-do-hotsales',
-    category: 'video',
-    categoryLabel: 'Vídeo',
-    badgeClass: 'badge-video',
-    title: 'Uso do HotSales',
-    subtitle: 'Uso Hotsales',
-    previewType: 'video-preview',
-    problemNotice: 'Vídeo demonstrativo com instruções sobre o uso e funcionalidades do aplicativo HotSales.',
-    causes: [],
-    // suggestions: [
-    //   'Assista ao vídeo explicativo sobre o uso do aplicativo HotSales:'/* [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'HotSales: [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'*/
-    // ],
-    youtubeVideoUrl: 'https://www.youtube.com/watch?v=Ki_7Dl3bs1k',
-    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/Ki_7Dl3bs1k?&autoplay=1&rel=0',
-    showStoreBanner: false,
-    tags: ['uso do hotsales', 'uso hotsales', 'video', 'vídeo', 'youtube', 'como usar', 'tutorial', 'treinamento', 'aplicativo', 'hotsales']
-  },
-  {
-    id: 'video-Recomendados-hotsales',
-    category: 'video',
-    categoryLabel: 'Vídeo',
-    badgeClass: 'badge-video',
-    title: 'Produtos Recomendados',
-    subtitle: 'Hotsales',
-    previewType: 'video-preview',
-    problemNotice: 'Vídeo demonstrativo com instruções sobre o botão de produtos recomentados.',
-    causes: [],
-    // suggestions: [
-    //   'Assista ao vídeo explicativo sobre o uso do aplicativo HotSales:'/* [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'HotSales: [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'*/
-    // ],
-    youtubeVideoUrl: 'https://youtu.be/ECnrYHxHtkA',
-    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/ECnrYHxHtkA?autoplay=1&rel=0',
-    showStoreBanner: false,
-    tags: ['uso do hotsales', 'uso hotsales', 'video', 'vídeo', 'youtube', 'como usar', 'tutorial', 'treinamento', 'aplicativo', 'hotsales','recomendados']
-  }
-  ,
-  {
-    id: 'video-Consumo-hotsales',
-    category: 'video',
-    categoryLabel: 'Vídeo',
-    badgeClass: 'badge-video',
-    title: 'Consumo do produto',
-    subtitle: 'Hotsales',
-    previewType: 'video-preview',
-    problemNotice: 'Vídeo demonstrativo com instruções sobre o botão de Consumo.',
-    causes: [],
-    // suggestions: [
-    //   'Assista ao vídeo explicativo sobre o uso do aplicativo HotSales:'/* [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'HotSales: [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'*/
-    // ],
-    youtubeVideoUrl: 'https://youtu.be/FebtZcjDpQk',
-    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/FebtZcjDpQk?autoplay=1&rel=0',
-    showStoreBanner: false,
-    tags: ['uso do hotsales', 'uso hotsales', 'video', 'vídeo', 'youtube', 'como usar', 'tutorial', 'treinamento', 'aplicativo', 'hotsales','consumo']
-  }
-  ,
-  {
-    id: 'video-substituto-hotsales',
-    category: 'video',
-    categoryLabel: 'Vídeo',
-    badgeClass: 'badge-video',
-    title: 'Produtos Substituto',
-    subtitle: 'Hotsales',
-    previewType: 'video-preview',
-    problemNotice: 'Vídeo demonstrativo com instruções sobre o botão de produtos substituto.',
-    causes: [],
-    // suggestions: [
-    //   'Assista ao vídeo explicativo sobre o uso do aplicativo HotSales:'/* [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'HotSales: [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'*/
-    // ],
-    youtubeVideoUrl: 'https://youtu.be/sCa-4PLSYXc',
-    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/sCa-4PLSYXc?autoplay=1&rel=0',
-    showStoreBanner: false,
-    tags: ['uso do hotsales', 'uso hotsales', 'video', 'vídeo', 'youtube', 'como usar', 'tutorial', 'treinamento', 'aplicativo', 'hotsales','substituto']
-  }
-    ,
-  {
-    id: 'video-relacionados-hotsales',
-    category: 'video',
-    categoryLabel: 'Vídeo',
-    badgeClass: 'badge-video',
-    title: 'Produtos Relacionados',
-    subtitle: 'Hotsales',
-    previewType: 'video-preview',
-    problemNotice: 'Vídeo demonstrativo com instruções sobre o botão de produtos relacionados.',
-    causes: [],
-    // suggestions: [
-    //   'Assista ao vídeo explicativo sobre o uso do aplicativo HotSales:'/* [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'HotSales: [Uso Hotsales](https://www.youtube.com/watch?v=Ki_7Dl3bs1k&t=707s)'*/
-    // ],
-    youtubeVideoUrl: 'https://youtu.be/B-zmvMXfNps',
-    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/B-zmvMXfNps?autoplay=1&rel=0',
-    showStoreBanner: false,
-    tags: ['uso do hotsales', 'uso hotsales', 'video', 'vídeo', 'youtube', 'como usar', 'tutorial', 'treinamento', 'aplicativo', 'hotsales','relacionados']
   },
   {
     id: 'conexao-modo-aviao-sinal-fraco',
@@ -585,7 +492,7 @@ const HELP_DATA = [
       '**Desative o Modo Avião:** Acesse a barra de notificações do celular ou as configurações e desligue o Modo Avião (✈️) para restabelecer a rede.',
       '**Verifique a internet:** Certifique-se de que os Dados Móveis (4G/5G) ou Wi-Fi estão ativos com sinal estável.',
       '**Aguarde a reconexão:** Após sair do Modo Avião, aguarde alguns segundos até que o sinal de rede se estabilize e acesse novamente o sistema.',
-      '**Em caso de urgência:** Acesse diretamente pelo navegador web: [Site HotSales](https://webunifort.hotsales.com.br/#/login)'
+      'Em caso de urgência, acesse. [Site HotSales](https://webunifort.hotsales.com.br/#/login), **Anteção**: o sinal fraco também afeta o acesso pelo site. Em regiões com instabilidade, deixe o aplicativo no modo offline antes de sair.'
     ],
     showStoreBanner: false,
     tags: ['aplicativo nao esta funcionando', 'modo avião', 'modo aviao', 'dados moveis com internet fraca', 'internet fraca', 'sem internet', 'sinal fraco', 'conexão', 'dados móveis', 'wi-fi', '3g', '4g', 'h+', 'avião', 'desconectar', 'não funciona', 'offline']
@@ -614,12 +521,247 @@ const HELP_DATA = [
   }
 ];
 
+// BASE DE VÍDEOS TUTORIAIS ORGANIZADOS POR CATEGORIA (HOTSALES, MARKETING, LOGÍSTICA, CRÉDITO, INSTITUCIONAL)
+const VIDEOS_DATA = [
+  {
+    id: 'video-uso-do-hotsales',
+    videoCategory: 'hotsales',
+    categoryLabel: 'HotSales',
+    title: 'Uso do HotSales',
+    description: 'Instruções gerais sobre o uso e funcionalidades do aplicativo HotSales.',
+    youtubeVideoUrl: 'https://www.youtube.com/watch?v=Ki_7Dl3bs1k',
+    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/Ki_7Dl3bs1k?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/Ki_7Dl3bs1k/mqdefault.jpg',
+    hasEad: true, // Mude para false para desativar a avaliação EAD deste vídeo
+    eadFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScrpnZcYeoqneALzgchmRkRKZ63zwPeAB8vyyxct1oF-RaYjw/viewform?usp=header',
+    tags: ['uso do hotsales', 'uso hotsales', 'hotsales', 'como usar', 'tutorial', 'treinamento', 'aplicativo']
+  },
+  {
+    id: 'video-Recomendados-hotsales',
+    videoCategory: 'hotsales',
+    categoryLabel: 'HotSales',
+    title: 'Produtos Recomendados',
+    description: 'Instruções sobre o botão e funcionalidades de produtos recomendados.',
+    youtubeVideoUrl: 'https://youtu.be/ECnrYHxHtkA',
+    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/ECnrYHxHtkA?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/ECnrYHxHtkA/mqdefault.jpg',
+    hasEad: false, // Mude para false para desativar a avaliação EAD deste vídeo
+    eadFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORMS_URL/viewform?embedded=true',
+    tags: ['recomendados', 'produtos recomendados', 'hotsales', 'sugestão', 'tutorial']
+  },
+  {
+    id: 'video-Consumo-hotsales',
+    videoCategory: 'hotsales',
+    categoryLabel: 'HotSales',
+    title: 'Consumo do produto',
+    description: 'Instruções sobre a consulta de consumo de produtos pelo aplicativo.',
+    youtubeVideoUrl: 'https://youtu.be/FebtZcjDpQk',
+    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/FebtZcjDpQk?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/FebtZcjDpQk/mqdefault.jpg',
+    hasEad: false, // Mude para false para desativar a avaliação EAD deste vídeo
+    eadFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORMS_URL/viewform?embedded=true',
+    tags: ['consumo', 'consumo do produto', 'histórico de compra', 'hotsales', 'tutorial']
+  },
+  {
+    id: 'video-substituto-hotsales',
+    videoCategory: 'hotsales',
+    categoryLabel: 'HotSales',
+    title: 'Produtos Substituto',
+    description: 'Instruções sobre como consultar e selecionar produtos substitutos.',
+    youtubeVideoUrl: 'https://youtu.be/sCa-4PLSYXc',
+    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/sCa-4PLSYXc?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/sCa-4PLSYXc/mqdefault.jpg',
+    hasEad: false, // Mude para false para desativar a avaliação EAD deste vídeo
+    eadFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORMS_URL/viewform?embedded=true',
+    tags: ['substituto', 'produtos substituto', 'troca de produto', 'hotsales', 'tutorial']
+  },
+  {
+    id: 'video-relacionados-hotsales',
+    videoCategory: 'hotsales',
+    categoryLabel: 'HotSales',
+    title: 'Produtos Relacionados',
+    description: 'Instruções práticas sobre o botão de produtos relacionados.',
+    youtubeVideoUrl: 'https://youtu.be/B-zmvMXfNps',
+    youtubeVideoEmbed: 'https://www.youtube-nocookie.com/embed/B-zmvMXfNps?autoplay=1&rel=0',
+    thumbnail: 'https://img.youtube.com/vi/B-zmvMXfNps/mqdefault.jpg',
+    hasEad: false, // Mude para false para desativar a avaliação EAD deste vídeo
+    eadFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORMS_URL/viewform?embedded=true',
+    tags: ['relacionados', 'produtos relacionados', 'venda cruzada', 'hotsales', 'tutorial']
+  },
+  {
+    id: 'video-marketing',
+    videoCategory: 'marketing',
+    categoryLabel: 'Marketing',
+    title: 'Marketing UniFort',
+    description: 'Vídeo institucional com diretrizes e orientações de Marketing.',
+    youtubeVideoUrl: 'https://drive.google.com/file/d/1zYokJqtHcP1_JwsojfpR2_xMc_DUu63Q/view',
+    youtubeVideoEmbed: 'https://drive.google.com/file/d/1zYokJqtHcP1_JwsojfpR2_xMc_DUu63Q/preview',
+    thumbnail: 'https://lh3.googleusercontent.com/d/1zYokJqtHcP1_JwsojfpR2_xMc_DUu63Q=w640',
+    hasEad:false, // Mude para false para desativar a avaliação EAD deste vídeo
+    eadFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORMS_URL/viewform?embedded=true',
+    tags: ['marketing', 'vídeo marketing', 'divulgação', 'campanhas', 'treinamento', 'institucional']
+  },
+  {
+    id: 'video-logistica',
+    videoCategory: 'logistica',
+    categoryLabel: 'Logística',
+    title: 'Logística & Entregas',
+    description: 'Orientações, fluxos de transporte, expedição e logística da UniFort.',
+    youtubeVideoUrl: 'https://drive.google.com/file/d/1ZagC6vH2PKAZ4J3fh1LB0ihFuveNS0TH/view',
+    youtubeVideoEmbed: 'https://drive.google.com/file/d/1ZagC6vH2PKAZ4J3fh1LB0ihFuveNS0TH/preview',
+    thumbnail: 'https://lh3.googleusercontent.com/d/1ZagC6vH2PKAZ4J3fh1LB0ihFuveNS0TH=w640',
+    hasEad:false, // Mude para false para desativar a avaliação EAD deste vídeo
+    eadFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORMS_URL/viewform?embedded=true',
+    tags: ['logística', 'logistica', 'transporte', 'entregas', 'rotas', 'expedição', 'joab', 'tutorial']
+  },
+  {
+    id: 'video-credito',
+    videoCategory: 'credito',
+    categoryLabel: 'Crédito',
+    title: 'Crédito, Cobrança e Cadastro',
+    description: 'Instruções e procedimentos sobre liberação de crédito, cadastro e cobrança.',
+    youtubeVideoUrl: 'https://drive.google.com/file/d/1bbt9tVhQbV-EniGdO2F7sug6Nbj49Iy7/view',
+    youtubeVideoEmbed: 'https://drive.google.com/file/d/1bbt9tVhQbV-EniGdO2F7sug6Nbj49Iy7/preview',
+    thumbnail: 'https://lh3.googleusercontent.com/d/1bbt9tVhQbV-EniGdO2F7sug6Nbj49Iy7=w640',
+    hasEad: false, // Mude para false para desativar a avaliação EAD deste vídeo
+    eadFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORMS_URL/viewform?embedded=true',
+    tags: ['crédito', 'credito', 'cobrança', 'cobranca', 'cadastro', 'análise', 'liberação', 'lorena', 'tutorial']
+  },
+  {
+    id: 'video-institucional',
+    videoCategory: 'institucional',
+    categoryLabel: 'Institucional',
+    title: 'Institucional UniFort',
+    description: 'Vídeo institucional com a história, estrutura e valores da UniFort.',
+    youtubeVideoUrl: 'https://drive.google.com/file/d/1hM0nICVJh-RL3SYLmdAIEDUkS258gtay/view',
+    youtubeVideoEmbed: 'https://drive.google.com/file/d/1hM0nICVJh-RL3SYLmdAIEDUkS258gtay/preview',
+    thumbnail: 'https://lh3.googleusercontent.com/d/1hM0nICVJh-RL3SYLmdAIEDUkS258gtay=w640',
+    hasEad: false, // Mude para false para desativar a avaliação EAD deste vídeo
+    eadFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORMS_URL/viewform?embedded=true',
+    tags: ['institucional', 'unifort', 'empresa', 'apresentação', 'história', 'valores', 'vídeo']
+  }
+];
+
+// ==========================================================================
+// 1.2 BASE DE DADOS DE DOCUMENTAÇÕES EM PDF (SERÃO DEFINIDOS PELO USUÁRIO)
+// ==========================================================================
+const DOCS_DATA = [
+  {
+    id: 'doc-manual-hotsales',
+    title: 'Manual de Utilização - HotSales',
+    category: 'hotsales',
+    categoryLabel: 'HotSales',
+    description: 'Instruções completas sobre o uso e funcionalidades do aplicativo HotSales.',
+    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Substitua pelo link do seu arquivo PDF
+    fileSize: '2.4 MB',
+    pages: '24 págs'
+  },
+  {
+    id: 'doc-produtos-recomendados',
+    title: 'Guia de Produtos Recomendados & Substitutos',
+    category: 'hotsales',
+    categoryLabel: 'HotSales',
+    description: 'Instruções sobre como consultar e aplicar produtos substitutos e recomendados no pedido.',
+    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    fileSize: '1.2 MB',
+    pages: '10 págs'
+  },
+  {
+    id: 'doc-diretrizes-marketing',
+    title: 'Diretrizes de Marketing UniFort',
+    category: 'marketing',
+    categoryLabel: 'Marketing',
+    description: 'Guia institucional com orientações de marca, promoções e relacionamento comercial.',
+    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    fileSize: '3.0 MB',
+    pages: '18 págs'
+  },
+  {
+    id: 'doc-procedimentos-logistica',
+    title: 'Procedimentos de Logística e Fretes',
+    category: 'logistica',
+    categoryLabel: 'Logística',
+    description: 'Normas de expedição, consulta de transportadoras e acompanhamento de entregas.',
+    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    fileSize: '1.9 MB',
+    pages: '14 págs'
+  },
+  {
+    id: 'doc-politica-credito',
+    title: 'Manual de Políticas de Crédito',
+    category: 'credito',
+    categoryLabel: 'Crédito',
+    description: 'Critérios de aprovação de crédito, prazos de pagamento e liberação de pedidos.',
+    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    fileSize: '1.5 MB',
+    pages: '12 págs'
+  },
+  {
+    id: 'doc-manual-institucional',
+    title: 'Manual Institucional & Cultura UniFort',
+    category: 'institucional',
+    categoryLabel: 'Institucional',
+    description: 'Valores corporativos, código de conduta e diretrizes da Universidade Unifort.',
+    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    fileSize: '2.8 MB',
+    pages: '22 págs'
+  }
+];
+
 // VARIÁVEIS DE CONTROLE DE FLUXO DA NAVEGAÇÃO E FILTROS
 let openedFromMenu = false; // Indica se o modal de solução foi aberto a partir da lista do menu
+let openedFromEadList = false; // Indica se a avaliação EAD foi aberta a partir da lista direta de EADs
 let currentCategoryFilter = 'todos'; // Categoria ativa ('todos', 'dica', 'conexao', 'login', 'checklist')
 let currentSortOrder = 'alpha'; // 'alpha' (A-Z) ou 'type' (organizado por tipo de cartão)
+let currentVideoCategory = 'all'; // Categoria ativa de vídeos ('all', 'ead', 'hotsales', 'credito', 'logistica', etc.)
+let isOnlyEadFilterActive = false; // Filtro rápido para exibir somente vídeos com avaliação EAD
+let activeEadSubjectId = null; // ID do assunto EAD atualmente em exibição no formulário
 
 // 2. REFERÊNCIAS DOS ELEMENTOS DOM
+const openVideoCategoriesModalBtn = document.getElementById('openVideoCategoriesModalBtn');
+
+// Referências do Hub de Seleção de Treinamentos (3 Opções)
+const trainingHubModal = document.getElementById('trainingHubModal');
+const trainingHubCloseBtn = document.getElementById('trainingHubCloseBtn');
+const hubOptionVideos = document.getElementById('hubOptionVideos');
+const hubOptionDocs = document.getElementById('hubOptionDocs');
+const hubOptionEad = document.getElementById('hubOptionEad');
+
+// Referências de Documentações em PDF
+const trainingDocsModal = document.getElementById('trainingDocsModal');
+const trainingDocsCloseBtn = document.getElementById('trainingDocsCloseBtn');
+const backToHubFromDocsBtn = document.getElementById('backToHubFromDocsBtn');
+const docsSearchInput = document.getElementById('docsSearchInput');
+const docsClearSearchBtn = document.getElementById('docsClearSearchBtn');
+const docsCardsList = document.getElementById('docsCardsList');
+
+// Referências de Avaliação EAD (Lista Direta)
+const trainingEadModal = document.getElementById('trainingEadModal');
+const trainingEadCloseBtn = document.getElementById('trainingEadCloseBtn');
+const backToHubFromEadBtn = document.getElementById('backToHubFromEadBtn');
+const eadSearchInput = document.getElementById('eadSearchInput');
+const eadClearSearchBtn = document.getElementById('eadClearSearchBtn');
+const eadAssessmentsList = document.getElementById('eadAssessmentsList');
+
+// Modal de Vídeos e Controles
+const videoCategoriesModal = document.getElementById('videoCategoriesModal');
+const videoCategoriesCloseBtn = document.getElementById('videoCategoriesCloseBtn');
+const backToHubFromVideosBtn = document.getElementById('backToHubFromVideosBtn');
+const videoSearchInput = document.getElementById('videoSearchInput');
+const videoClearSearchBtn = document.getElementById('videoClearSearchBtn');
+const videoCardsList = document.getElementById('videoCardsList');
+const btnFilterOnlyEad = document.getElementById('btnFilterOnlyEad');
+
+// Referências da Central de Treinamentos & Avaliação EAD
+const trainingViewVideos = document.getElementById('trainingViewVideos');
+const trainingViewEad = document.getElementById('trainingViewEad');
+const trainingVideosControls = document.getElementById('trainingVideosControls');
+const eadBackToVideosBtn = document.getElementById('eadBackToVideosBtn');
+const eadActiveSubjectBadge = document.getElementById('eadActiveSubjectBadge');
+const eadActiveSubjectTitle = document.getElementById('eadActiveSubjectTitle');
+const eadWatchRelatedVideoBtn = document.getElementById('eadWatchRelatedVideoBtn');
+const eadMainGoogleForms = document.getElementById('eadMainGoogleForms');
+
 const openMenuModalBtn = document.getElementById('openMenuModalBtn');
 const systemHelpMenuModal = document.getElementById('systemHelpMenuModal');
 const menuModalCloseBtn = document.getElementById('menuModalCloseBtn');
@@ -675,16 +817,59 @@ window.toggleCausesSection = function(e) {
   }
 };
 
-// Funções globais para o Modal de Vídeo Tutorial em Tela Cheia (YouTube)
-window.openVideoModal = function(embedUrl, directUrl) {
+// Funções globais para o Modal de Vídeo Tutorial em Tela Cheia (YouTube / Google Drive)
+window.openVideoModal = function(embedUrl, directUrl, title) {
   const videoModal = document.getElementById('videoFullscreenModal');
   const iframe = document.getElementById('fullscreenVideoIframe');
   const externalLink = document.getElementById('videoExternalYtLink');
+  const titleEl = document.getElementById('videoFullscreenTitle');
   if (!videoModal || !iframe) return;
 
   const finalEmbed = embedUrl || 'https://www.youtube-nocookie.com/embed/HvAo73OVPlY?autoplay=1&rel=0';
   iframe.src = finalEmbed;
-  if (externalLink) externalLink.href = directUrl || 'https://youtu.be/HvAo73OVPlY';
+
+  const finalDirect = directUrl || 'https://youtu.be/HvAo73OVPlY';
+  if (externalLink) {
+    externalLink.href = finalDirect;
+    const isDrive = finalDirect.includes('drive.google.com');
+    if (isDrive) {
+      externalLink.innerHTML = `
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right: 5px; vertical-align: middle;">
+          <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+        </svg>
+        <span>Abrir Vídeo Completo ↗</span>
+      `;
+      externalLink.title = 'Abrir o vídeo diretamente no navegador';
+    } else {
+      externalLink.innerHTML = `
+        <svg class="youtube-btn-icon" viewBox="0 0 24 24" width="18" height="18" style="margin-right: 5px; vertical-align: middle;">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#ff0000"/>
+          <polygon points="9.545,8.432 15.818,12 9.545,15.568" fill="#ffffff"/>
+        </svg>
+        <span>Abrir no YouTube ↗</span>
+      `;
+      externalLink.title = 'Abrir diretamente no site/app do YouTube';
+    }
+  }
+
+  if (titleEl) {
+    titleEl.textContent = title || 'Vídeo Tutorial';
+  }
+
+  // Oculta ou exibe o botão de EAD no topo do player caso o vídeo tenha EAD desativado
+  const playerJumpEadBtn = document.getElementById('playerJumpEadBtn');
+  if (playerJumpEadBtn) {
+    const matchingVideo = VIDEOS_DATA.find(v => 
+      (v.youtubeVideoEmbed && embedUrl && v.youtubeVideoEmbed.split('?')[0] === embedUrl.split('?')[0]) || 
+      (v.title && title && v.title.toLowerCase() === title.toLowerCase())
+    );
+    if (matchingVideo && (matchingVideo.hasEad === false || !matchingVideo.eadFormUrl || matchingVideo.eadFormUrl.trim() === '')) {
+      playerJumpEadBtn.style.display = 'none';
+    } else {
+      playerJumpEadBtn.style.display = 'inline-flex';
+    }
+  }
+
   videoModal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 
@@ -711,6 +896,8 @@ window.closeVideoModal = function() {
     document.body.style.overflow = 'hidden';
   } else if (systemHelpMenuModal && systemHelpMenuModal.style.display === 'flex') {
     document.body.style.overflow = 'hidden';
+  } else if (videoCategoriesModal && videoCategoriesModal.style.display === 'flex') {
+    document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = 'auto';
   }
@@ -726,12 +913,198 @@ if (document.readyState === 'loading') {
 function initApp() {
   updateCategoryPillCounts();
   applyMenuFilterAndSort();
+  updateVideoTabCounts();
+  applyVideoFilter();
   renderCards();
   initEvents();
   initPwaInstall();
 }
 
 function initEvents() {
+  // Abrir o Modal da Central de Treinamentos (Hub de Seleção com as 3 Opções)
+  if (openVideoCategoriesModalBtn) {
+    openVideoCategoriesModalBtn.addEventListener('click', () => openTrainingHubModal());
+  }
+
+  // Ações do Hub de Treinamentos
+  if (trainingHubCloseBtn) {
+    trainingHubCloseBtn.addEventListener('click', closeTrainingHubModal);
+  }
+  if (trainingHubModal) {
+    trainingHubModal.addEventListener('click', (e) => {
+      if (e.target === trainingHubModal) closeTrainingHubModal();
+    });
+  }
+  if (hubOptionVideos) {
+    hubOptionVideos.addEventListener('click', () => {
+      closeTrainingHubModal();
+      openVideoCategoriesModal();
+    });
+  }
+  if (hubOptionDocs) {
+    hubOptionDocs.addEventListener('click', () => {
+      closeTrainingHubModal();
+      openDocsModal();
+    });
+  }
+  if (hubOptionEad) {
+    hubOptionEad.addEventListener('click', () => {
+      closeTrainingHubModal();
+      openEadListModal();
+    });
+  }
+
+  // Ações do Modal de Documentações em PDF
+  if (trainingDocsCloseBtn) {
+    trainingDocsCloseBtn.addEventListener('click', closeDocsModal);
+  }
+  if (trainingDocsModal) {
+    trainingDocsModal.addEventListener('click', (e) => {
+      if (e.target === trainingDocsModal) closeDocsModal();
+    });
+  }
+  if (backToHubFromDocsBtn) {
+    backToHubFromDocsBtn.addEventListener('click', () => {
+      closeDocsModal();
+      openTrainingHubModal();
+    });
+  }
+  if (docsSearchInput) {
+    docsSearchInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      if (docsClearSearchBtn) docsClearSearchBtn.style.display = val.length > 0 ? 'block' : 'none';
+      renderDocsCardsList();
+    });
+  }
+  if (docsClearSearchBtn) {
+    docsClearSearchBtn.addEventListener('click', () => {
+      if (docsSearchInput) docsSearchInput.value = '';
+      docsClearSearchBtn.style.display = 'none';
+      renderDocsCardsList();
+      docsSearchInput.focus();
+    });
+  }
+
+  // Ações do Modal de Avaliações EAD
+  if (trainingEadCloseBtn) {
+    trainingEadCloseBtn.addEventListener('click', closeEadListModal);
+  }
+  if (trainingEadModal) {
+    trainingEadModal.addEventListener('click', (e) => {
+      if (e.target === trainingEadModal) closeEadListModal();
+    });
+  }
+  if (backToHubFromEadBtn) {
+    backToHubFromEadBtn.addEventListener('click', () => {
+      closeEadListModal();
+      openTrainingHubModal();
+    });
+  }
+  if (eadSearchInput) {
+    eadSearchInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      if (eadClearSearchBtn) eadClearSearchBtn.style.display = val.length > 0 ? 'block' : 'none';
+      renderEadAssessmentsList();
+    });
+  }
+  if (eadClearSearchBtn) {
+    eadClearSearchBtn.addEventListener('click', () => {
+      if (eadSearchInput) eadSearchInput.value = '';
+      eadClearSearchBtn.style.display = 'none';
+      renderEadAssessmentsList();
+      eadSearchInput.focus();
+    });
+  }
+
+  // Voltar ao Hub de Treinamentos a partir do Modal de Vídeos
+  if (backToHubFromVideosBtn) {
+    backToHubFromVideosBtn.addEventListener('click', () => {
+      closeVideoCategoriesModal();
+      openTrainingHubModal();
+    });
+  }
+
+  // Voltar da visualização do formulário EAD para os vídeos ou para a lista de EADs
+  if (eadBackToVideosBtn) {
+    eadBackToVideosBtn.addEventListener('click', backToVideosList);
+  }
+
+  // Botão para assistir à aula em vídeo a partir do topo do formulário EAD
+  if (eadWatchRelatedVideoBtn) {
+    eadWatchRelatedVideoBtn.addEventListener('click', () => {
+      if (activeEadSubjectId) {
+        const item = VIDEOS_DATA.find(v => v.id === activeEadSubjectId);
+        if (item) {
+          window.openVideoModal(item.youtubeVideoEmbed, item.youtubeVideoUrl, item.title);
+        }
+      }
+    });
+  }
+
+  // Atalho dentro do player de vídeo para fazer avaliação EAD sem precisar assistir até o final
+  const playerJumpEadBtn = document.getElementById('playerJumpEadBtn');
+  if (playerJumpEadBtn) {
+    playerJumpEadBtn.addEventListener('click', () => {
+      const currentIframe = document.getElementById('fullscreenVideoIframe');
+      const currentSrc = currentIframe ? currentIframe.src : '';
+      const matchingVideo = VIDEOS_DATA.find(v => v.youtubeVideoEmbed && currentSrc.includes(v.youtubeVideoEmbed.split('?')[0]));
+      window.closeVideoModal();
+      openVideoCategoriesModal(matchingVideo ? matchingVideo.id : null);
+    });
+  }
+
+  // Fechar o Modal de Treinamentos
+  if (videoCategoriesCloseBtn) {
+    videoCategoriesCloseBtn.addEventListener('click', closeVideoCategoriesModal);
+  }
+
+  // Clicar fora do Modal de Treinamentos fecha a janela
+  if (videoCategoriesModal) {
+    videoCategoriesModal.addEventListener('click', (e) => {
+      if (e.target === videoCategoriesModal) closeVideoCategoriesModal();
+    });
+  }
+
+  // Pesquisa no Modal de Vídeos
+  if (videoSearchInput) {
+    videoSearchInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      if (videoClearSearchBtn) {
+        videoClearSearchBtn.style.display = val.length > 0 ? 'block' : 'none';
+      }
+      applyVideoFilter();
+    });
+  }
+
+  if (videoClearSearchBtn) {
+    videoClearSearchBtn.addEventListener('click', () => {
+      if (videoSearchInput) videoSearchInput.value = '';
+      videoClearSearchBtn.style.display = 'none';
+      applyVideoFilter();
+      videoSearchInput.focus();
+    });
+  }
+
+  // Botão Toggle "Somente com EAD" ao lado da barra de pesquisa
+  if (btnFilterOnlyEad) {
+    btnFilterOnlyEad.addEventListener('click', () => {
+      isOnlyEadFilterActive = !isOnlyEadFilterActive;
+      btnFilterOnlyEad.classList.toggle('active', isOnlyEadFilterActive);
+      applyVideoFilter();
+    });
+  }
+
+  // Abas de categorias de vídeos (Todos, HotSales, Marketing, Logística, Crédito, Institucional)
+  const videoTabBtns = document.querySelectorAll('#videoCategoryTabs .video-tab-btn');
+  videoTabBtns.forEach(tab => {
+    tab.addEventListener('click', () => {
+      videoTabBtns.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentVideoCategory = tab.dataset.videocat || 'all';
+      applyVideoFilter();
+    });
+  });
+
   // Abrir o Modal de Menu de Opções
   if (openMenuModalBtn) {
     openMenuModalBtn.addEventListener('click', openMenuModal);
@@ -770,17 +1143,17 @@ function initEvents() {
   }
 
   // Filtros por Tipo de Cartão no Modal (Pills)
-  const catPills = document.querySelectorAll('.cat-pill-btn');
+  const catPills = document.querySelectorAll('#modalCategoryFilters .cat-pill-btn');
   catPills.forEach(pill => {
     pill.addEventListener('click', () => {
       catPills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
-      currentCategoryFilter = pill.dataset.category || 'todos';
+      currentCategoryFilter = pill.dataset.category;
       applyMenuFilterAndSort();
     });
   });
 
-  // Ordenação (Ordem Alfabética A-Z ou Organizar por Tipo)
+  // Ordenação da lista no modal
   if (sortOrderSelect) {
     sortOrderSelect.addEventListener('change', (e) => {
       currentSortOrder = e.target.value;
@@ -788,117 +1161,107 @@ function initEvents() {
     });
   }
 
-  // Fechar o Modal de Solução
+  // Fechar Modal de Solução
   if (modalCloseBtn) {
     modalCloseBtn.addEventListener('click', closeModal);
   }
 
+  // Clicar no fundo escuro fecha o modal
   if (solutionModal) {
     solutionModal.addEventListener('click', (e) => {
       if (e.target === solutionModal) closeModal();
     });
   }
 
-  // Fechar o Modal de Vídeo ao clicar no backdrop escuro
-  const videoFullscreenModal = document.getElementById('videoFullscreenModal');
-  if (videoFullscreenModal) {
-    videoFullscreenModal.addEventListener('click', (e) => {
-      if (e.target === videoFullscreenModal) window.closeVideoModal();
-    });
-  }
-
-  // Alternar colapso/expansão de Possíveis Causas no Modal de Solução
-  const causesToggleBtn = document.getElementById('causesToggleBtn');
-  if (causesToggleBtn && !causesToggleBtn.getAttribute('onclick')) {
-    causesToggleBtn.addEventListener('click', window.toggleCausesSection);
-  }
-
-  // Tecla ESC fecha modais ativos
+  // Fechar qualquer modal ao pressionar ESC
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      const vModal = document.getElementById('videoFullscreenModal');
-      if (vModal && vModal.style.display === 'flex') {
-        window.closeVideoModal();
-      } else if (solutionModal && solutionModal.style.display === 'flex') {
-        closeModal();
-      } else if (systemHelpMenuModal && systemHelpMenuModal.style.display === 'flex') {
-        closeMenuModal(true);
-      }
+      window.closeVideoModal();
+      closeModal();
+      closeMenuModal(true);
+      closeVideoCategoriesModal();
+      closeTrainingHubModal();
+      closeDocsModal();
+      closeEadListModal();
     }
   });
 
   // Botão Voltar ao Topo
-  window.addEventListener('scroll', () => {
-    if (scrollTopBtn) {
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         scrollTopBtn.style.display = 'flex';
       } else {
         scrollTopBtn.style.display = 'none';
       }
-    }
-  });
+    });
 
-  if (scrollTopBtn) {
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 }
 
-// 4. ABRIR E FECHAR O MODAL DE MENU DE OPÇÕES (MENSAGENS / AJUDA DO SISTEMA)
+// 4. FUNÇÕES DO MODAL DE MENU DE OPÇÕES COM BUSCA INTELIGENTE
 function openMenuModal() {
   if (!systemHelpMenuModal) return;
   systemHelpMenuModal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 
-  // Não focar automaticamente para permitir navegação livre
+  // Reseta ou reaplica filtros ao abrir o menu
+  applyMenuFilterAndSort();
+
+  // Foco no campo de busca para digitação rápida sem forçar zoom no mobile
   if (modalSearchInput && document.activeElement === modalSearchInput) {
     modalSearchInput.blur();
   }
 }
 
-// 5. RENDERIZAÇÃO DA LISTA DE OPÇÕES DO MENU (FILTRO POR TIPO E ORDENAÇÃO)
 function applyMenuFilterAndSort() {
   const query = modalSearchInput ? modalSearchInput.value : '';
   const normalizedQuery = normalizeString(query);
 
   let filtered = HELP_DATA.filter(item => {
-    // 1. Filtro por tipo/categoria do cartão
+    // 1. Filtro por categoria ativa nas abas do modal
     if (currentCategoryFilter !== 'todos' && item.category !== currentCategoryFilter) {
       return false;
     }
+
     // 2. Filtro por busca textual inteligente
     if (!normalizedQuery) return true;
+
     const titleMatch = normalizeString(item.title).includes(normalizedQuery);
-    const subtitleMatch = normalizeString(item.subtitle).includes(normalizedQuery);
-    const categoryMatch = normalizeString(item.categoryLabel).includes(normalizedQuery);
+    const subtitleMatch = item.subtitle ? normalizeString(item.subtitle).includes(normalizedQuery) : false;
+    const catMatch = normalizeString(item.categoryLabel).includes(normalizedQuery);
     const tagMatch = item.tags && item.tags.some(tag => normalizeString(tag).includes(normalizedQuery));
-    
-    return titleMatch || subtitleMatch || categoryMatch || tagMatch;
+    const causeMatch = item.causes && item.causes.some(cause => normalizeString(cause).includes(normalizedQuery));
+
+    return titleMatch || subtitleMatch || catMatch || tagMatch || causeMatch;
   });
 
-  renderMenuOptionsList(filtered, currentSortOrder);
+  renderMenuOptions(filtered);
 }
 
-function renderMenuOptionsList(data, sortOrder = currentSortOrder) {
+function renderMenuOptions(data) {
   if (!menuOptionsList) return;
 
   if (data.length === 0) {
     menuOptionsList.innerHTML = `
-      <div style="text-align: center; padding: 24px; color: #cbd5e1;">
-        <p style="font-size: 1rem; font-weight: 600;">Nenhuma opção localizada para este filtro.</p>
-        <p style="font-size: 0.85rem; margin-top: 4px;">Tente selecionar outro tipo ou limpar os termos de pesquisa.</p>
+      <div class="menu-empty-state">
+        <div class="menu-empty-icon">🔍</div>
+        <h4>Nenhuma opção encontrada</h4>
+        <p>Tente buscar por outra palavra-chave ou limpe o campo de busca.</p>
       </div>
     `;
     return;
   }
 
-  // Se o usuário selecionou "Organizar por Tipo" e está visualizando todos os itens
-  if (sortOrder === 'type' && currentCategoryFilter === 'todos') {
+  if (currentSortOrder === 'type') {
+    // Organizado e agrupado por tipo de cartão
     const categoryConfigs = [
-      { key: 'video', label: '🎥 VÍDEOS TUTORIAIS', class: 'group-video' },
       { key: 'dica', label: '💡 DICAS DO SISTEMA', class: 'group-dica' },
-      { key: 'conexao', label: '📶 CONEXÃO & DADOS', class: 'group-conexao' },
+      { key: 'conexao', label: '📶 CONEXÃO & BANCO DE DADOS', class: 'group-conexao' },
+
       { key: 'login', label: '🔑 LOGIN & PERMISSÃO', class: 'group-login' },
       { key: 'checklist', label: '📋 CHECKLIST INICIAL', class: 'group-checklist' }
     ];
@@ -958,7 +1321,6 @@ function renderMenuOptionsList(data, sortOrder = currentSortOrder) {
 function updateCategoryPillCounts() {
   const counts = {
     todos: HELP_DATA.length,
-    video: HELP_DATA.filter(x => x.category === 'video').length,
     dica: HELP_DATA.filter(x => x.category === 'dica').length,
     conexao: HELP_DATA.filter(x => x.category === 'conexao').length,
     login: HELP_DATA.filter(x => x.category === 'login').length,
@@ -989,6 +1351,436 @@ function closeMenuModal(resetMenuState = true) {
   if (solutionModal && solutionModal.style.display === 'none') {
     document.body.style.overflow = 'auto';
   }
+}
+
+// ==========================================================================
+// FUNÇÕES DO HUB DE TREINAMENTOS (3 OPÇÕES: VÍDEOS, DOCUMENTAÇÕES, EAD)
+// ==========================================================================
+function openTrainingHubModal() {
+  if (trainingHubModal) {
+    trainingHubModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeTrainingHubModal() {
+  if (trainingHubModal) {
+    trainingHubModal.style.display = 'none';
+  }
+
+  if ((!solutionModal || solutionModal.style.display === 'none') &&
+      (!systemHelpMenuModal || systemHelpMenuModal.style.display === 'none') &&
+      (!videoCategoriesModal || videoCategoriesModal.style.display === 'none') &&
+      (!trainingDocsModal || trainingDocsModal.style.display === 'none') &&
+      (!trainingEadModal || trainingEadModal.style.display === 'none')) {
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// ==========================================================================
+// FUNÇÕES DE DOCUMENTAÇÕES EM PDF
+// ==========================================================================
+function openDocsModal() {
+  if (trainingDocsModal) {
+    trainingDocsModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    if (docsSearchInput) docsSearchInput.value = '';
+    if (docsClearSearchBtn) docsClearSearchBtn.style.display = 'none';
+    renderDocsCardsList();
+  }
+}
+
+function closeDocsModal() {
+  if (trainingDocsModal) {
+    trainingDocsModal.style.display = 'none';
+  }
+
+  if ((!solutionModal || solutionModal.style.display === 'none') &&
+      (!systemHelpMenuModal || systemHelpMenuModal.style.display === 'none') &&
+      (!videoCategoriesModal || videoCategoriesModal.style.display === 'none') &&
+      (!trainingEadModal || trainingEadModal.style.display === 'none') &&
+      (!trainingHubModal || trainingHubModal.style.display === 'none')) {
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function renderDocsCardsList() {
+  if (!docsCardsList) return;
+
+  const query = docsSearchInput ? normalizeString(docsSearchInput.value) : '';
+  const filtered = DOCS_DATA.filter(doc => {
+    if (!query) return true;
+    const titleMatch = normalizeString(doc.title).includes(query);
+    const descMatch = normalizeString(doc.description).includes(query);
+    const catMatch = normalizeString(doc.categoryLabel).includes(query);
+    return titleMatch || descMatch || catMatch;
+  });
+
+  if (filtered.length === 0) {
+    docsCardsList.innerHTML = `
+      <div class="video-empty-state" style="grid-column: 1 / -1;">
+        <div class="video-empty-icon">📄</div>
+        <h4>Nenhuma documentação encontrada</h4>
+        <p>Nenhum documento PDF corresponde aos termos pesquisados.</p>
+      </div>
+    `;
+    return;
+  }
+
+  docsCardsList.innerHTML = filtered.map(doc => `
+    <div class="doc-item-card">
+      <div class="doc-card-header">
+        <div class="doc-pdf-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <div class="doc-card-title-wrap">
+          <span class="video-category-tag tag-${doc.category}" style="margin-bottom: 4px; display: inline-block;">${doc.categoryLabel}</span>
+          <h4>${doc.title}</h4>
+          <span class="doc-card-meta">${doc.fileSize} • ${doc.pages}</span>
+        </div>
+      </div>
+      <p class="doc-card-desc">${doc.description}</p>
+      <div class="doc-card-actions">
+        <a href="${doc.pdfUrl}" target="_blank" rel="noopener" class="btn-open-pdf" title="Visualizar documento em PDF">
+          <span>Abrir PDF ↗</span>
+        </a>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ==========================================================================
+// FUNÇÕES DE AVALIAÇÃO EAD (LISTA DIRETA: NOME DO VÍDEO + LINK DE ACESSO)
+// ==========================================================================
+function openEadListModal() {
+  if (trainingEadModal) {
+    trainingEadModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    if (eadSearchInput) eadSearchInput.value = '';
+    if (eadClearSearchBtn) eadClearSearchBtn.style.display = 'none';
+    renderEadAssessmentsList();
+  }
+}
+
+function closeEadListModal() {
+  if (trainingEadModal) {
+    trainingEadModal.style.display = 'none';
+  }
+
+  if ((!solutionModal || solutionModal.style.display === 'none') &&
+      (!systemHelpMenuModal || systemHelpMenuModal.style.display === 'none') &&
+      (!videoCategoriesModal || videoCategoriesModal.style.display === 'none') &&
+      (!trainingDocsModal || trainingDocsModal.style.display === 'none') &&
+      (!trainingHubModal || trainingHubModal.style.display === 'none')) {
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function renderEadAssessmentsList() {
+  if (!eadAssessmentsList) return;
+
+  const query = eadSearchInput ? normalizeString(eadSearchInput.value) : '';
+  const eadVideos = VIDEOS_DATA.filter(item => item.hasEad === true);
+
+  const filtered = eadVideos.filter(item => {
+    if (!query) return true;
+    const titleMatch = normalizeString(item.title).includes(query);
+    const descMatch = normalizeString(item.description).includes(query);
+    const catMatch = normalizeString(item.categoryLabel).includes(query);
+    return titleMatch || descMatch || catMatch;
+  });
+
+  if (filtered.length === 0) {
+    eadAssessmentsList.innerHTML = `
+      <div class="video-empty-state">
+        <div class="video-empty-icon">📝</div>
+        <h4>Nenhuma avaliação EAD encontrada</h4>
+        <p>Não há avaliações ativas para o termo pesquisado.</p>
+      </div>
+    `;
+    return;
+  }
+
+  eadAssessmentsList.innerHTML = filtered.map(item => `
+    <div class="ead-assessment-item">
+      <div class="ead-item-info">
+        <div class="ead-item-tags">
+          <span class="video-category-tag tag-${item.videoCategory}">${item.categoryLabel}</span>
+          <span class="ead-item-status-pill">Avaliação EAD Disponível</span>
+        </div>
+        <h3 class="ead-item-title">${item.title}</h3>
+        <p class="ead-item-desc">${item.description || 'Avaliação oficial sobre os conteúdos deste treinamento.'}</p>
+      </div>
+      <div class="ead-item-action">
+        <button type="button" class="btn-start-ead" data-id="${item.id}" title="Acessar formulário da avaliação EAD">
+          <span>Acessar EAD</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  `).join('');
+
+  eadAssessmentsList.querySelectorAll('.btn-start-ead').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const subjectId = btn.dataset.id;
+      if (trainingEadModal) trainingEadModal.style.display = 'none';
+      openEadSubjectForm(subjectId, true);
+    });
+  });
+}
+
+// ==========================================================================
+// FUNÇÕES DA CENTRAL DE VÍDEOS & FORMULÁRIO EAD
+// ==========================================================================
+function openVideoCategoriesModal(subjectId = null) {
+  if (!videoCategoriesModal) return;
+
+  if (subjectId) {
+    openEadSubjectForm(subjectId);
+  } else {
+    backToVideosList();
+  }
+
+  videoCategoriesModal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+
+  if (videoSearchInput && document.activeElement === videoSearchInput) {
+    videoSearchInput.blur();
+  }
+}
+
+function closeVideoCategoriesModal() {
+  if (videoCategoriesModal) {
+    videoCategoriesModal.style.display = 'none';
+    videoCategoriesModal.classList.remove('ead-mode');
+    const dialog = videoCategoriesModal.querySelector('.training-modal-dialog');
+    if (dialog) dialog.classList.remove('ead-fullscreen');
+  }
+
+  if ((!solutionModal || solutionModal.style.display === 'none') &&
+      (!systemHelpMenuModal || systemHelpMenuModal.style.display === 'none') &&
+      (!trainingDocsModal || trainingDocsModal.style.display === 'none') &&
+      (!trainingEadModal || trainingEadModal.style.display === 'none') &&
+      (!trainingHubModal || trainingHubModal.style.display === 'none')) {
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function openEadSubjectForm(subjectId, fromEadList = false) {
+  const item = VIDEOS_DATA.find(v => v.id === subjectId);
+  if (!item) return;
+
+  // Se o EAD deste vídeo estiver desativado, retorna para a lista e avisa
+  if (item.hasEad === false || !item.eadFormUrl || !item.eadFormUrl.trim()) {
+    backToVideosList();
+    showToast('Este vídeo não possui avaliação EAD.');
+    return;
+  }
+
+  activeEadSubjectId = subjectId;
+  openedFromEadList = fromEadList;
+
+  // Atualiza o texto do botão voltar dentro do EAD
+  const backBtnText = document.getElementById('eadBackBtnText');
+  if (backBtnText) {
+    backBtnText.textContent = fromEadList ? '← Voltar às Avaliações' : '← Voltar aos Vídeos';
+  }
+
+  // Expande o modal por completo (Fullscreen)
+  if (videoCategoriesModal) {
+    videoCategoriesModal.classList.add('ead-mode');
+    const dialog = videoCategoriesModal.querySelector('.training-modal-dialog');
+    if (dialog) dialog.classList.add('ead-fullscreen');
+    videoCategoriesModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  if (eadActiveSubjectTitle) {
+    eadActiveSubjectTitle.textContent = `Avaliação: ${item.title}`;
+  }
+  if (eadActiveSubjectBadge) {
+    eadActiveSubjectBadge.textContent = item.categoryLabel;
+    eadActiveSubjectBadge.className = `video-category-tag tag-${item.videoCategory}`;
+  }
+
+  if (eadMainGoogleForms) {
+    eadMainGoogleForms.src = item.eadFormUrl || 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORMS_URL/viewform?embedded=true';
+  }
+
+  // Oculta a lista de vídeos e os controles de filtro/pesquisa para foco total na avaliação
+  if (trainingViewVideos) {
+    trainingViewVideos.classList.remove('active');
+    trainingViewVideos.style.display = 'none';
+  }
+  if (trainingVideosControls) {
+    trainingVideosControls.style.display = 'none';
+  }
+
+  // Exibe o painel do formulário EAD
+  if (trainingViewEad) {
+    trainingViewEad.style.display = 'block';
+    setTimeout(() => trainingViewEad.classList.add('active'), 10);
+  }
+}
+
+function backToVideosList() {
+  activeEadSubjectId = null;
+
+  // Se a avaliação foi aberta a partir da lista direta de EADs, retorna para a lista de EADs
+  if (openedFromEadList) {
+    openedFromEadList = false;
+    closeVideoCategoriesModal();
+    openEadListModal();
+    return;
+  }
+
+  // Restaura o modal para as dimensões padrão da lista de vídeos
+  if (videoCategoriesModal) {
+    videoCategoriesModal.classList.remove('ead-mode');
+    const dialog = videoCategoriesModal.querySelector('.training-modal-dialog');
+    if (dialog) dialog.classList.remove('ead-fullscreen');
+  }
+
+  if (trainingViewEad) {
+    trainingViewEad.classList.remove('active');
+    trainingViewEad.style.display = 'none';
+  }
+
+  if (trainingVideosControls) {
+    trainingVideosControls.style.display = 'block';
+  }
+
+  if (trainingViewVideos) {
+    trainingViewVideos.style.display = 'block';
+    setTimeout(() => trainingViewVideos.classList.add('active'), 10);
+  }
+
+  updateVideoTabCounts();
+  applyVideoFilter();
+}
+
+function updateVideoTabCounts() {
+  const countAll = document.getElementById('videoCountAll');
+  const countEadBadge = document.getElementById('videoCountEadBadge');
+  const countHotsales = document.getElementById('videoCountHotsales');
+  const countMarketing = document.getElementById('videoCountMarketing');
+  const countLogistica = document.getElementById('videoCountLogistica');
+  const countCredito = document.getElementById('videoCountCredito');
+  const countInstitucional = document.getElementById('videoCountInstitucional');
+
+  const eadVideosCount = VIDEOS_DATA.filter(v => v.hasEad === true).length;
+
+  if (countAll) countAll.textContent = VIDEOS_DATA.length;
+  if (countEadBadge) countEadBadge.textContent = eadVideosCount;
+  if (countHotsales) countHotsales.textContent = VIDEOS_DATA.filter(v => v.videoCategory === 'hotsales').length;
+  if (countMarketing) countMarketing.textContent = VIDEOS_DATA.filter(v => v.videoCategory === 'marketing').length;
+  if (countLogistica) countLogistica.textContent = VIDEOS_DATA.filter(v => v.videoCategory === 'logistica').length;
+  if (countCredito) countCredito.textContent = VIDEOS_DATA.filter(v => v.videoCategory === 'credito').length;
+  if (countInstitucional) countInstitucional.textContent = VIDEOS_DATA.filter(v => v.videoCategory === 'institucional').length;
+}
+
+function applyVideoFilter() {
+  const query = videoSearchInput ? videoSearchInput.value : '';
+  const normalizedQuery = normalizeString(query);
+
+  let filtered = VIDEOS_DATA.filter(item => {
+    // 1. Filtro rápido "Somente com EAD"
+    if (isOnlyEadFilterActive && !item.hasEad) {
+      return false;
+    }
+
+    // 2. Filtro por categoria ativa nas abas
+    if (currentVideoCategory !== 'all' && item.videoCategory !== currentVideoCategory) {
+      return false;
+    }
+
+    // 3. Filtro por busca textual inteligente
+    if (!normalizedQuery) return true;
+    const titleMatch = normalizeString(item.title).includes(normalizedQuery);
+    const descMatch = normalizeString(item.description).includes(normalizedQuery);
+    const catMatch = normalizeString(item.categoryLabel).includes(normalizedQuery);
+    const tagMatch = item.tags && item.tags.some(tag => normalizeString(tag).includes(normalizedQuery));
+
+    return titleMatch || descMatch || catMatch || tagMatch;
+  });
+
+  renderVideoCardsList(filtered);
+}
+
+function renderVideoCardsList(videos) {
+
+  if (!videoCardsList) return;
+
+  if (videos.length === 0) {
+    const isEadFilter = isOnlyEadFilterActive;
+    videoCardsList.innerHTML = `
+      <div class="video-empty-state">
+        <div class="video-empty-icon">${isEadFilter ? '📝' : '📂'}</div>
+        <h4>${isEadFilter ? 'Nenhum treinamento com avaliação EAD encontrado' : 'Nenhum vídeo disponível no momento'}</h4>
+        <p>${isEadFilter ? 'Nenhum vídeo com avaliação EAD corresponde aos filtros aplicados.' : 'Os tutoriais desta categoria serão adicionados em breve.'}</p>
+      </div>
+    `;
+    return;
+  }
+
+  videoCardsList.innerHTML = videos.map(item => `
+    <div class="video-item-card" data-id="${item.id}" data-embed="${item.youtubeVideoEmbed}" data-url="${item.youtubeVideoUrl}" data-title="${item.title}" title="Clique para assistir: ${item.title}">
+      <div class="video-card-thumb-area" style="background-image: url('${item.thumbnail}');">
+        <div class="video-card-thumb-overlay"></div>
+        <span class="video-category-tag tag-${item.videoCategory}">${item.categoryLabel}</span>
+        <div class="video-play-pulse-btn" title="Assistir vídeo">
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <polygon points="9.5,7.5 16.5,12 9.5,16.5" fill="#ffffff"/>
+          </svg>
+        </div>
+      </div>
+      <div class="video-item-info">
+        <h4>${item.title}</h4>
+        <p>${item.description}</p>
+      </div>
+      <div class="video-card-footer ${item.hasEad === false || !item.eadFormUrl || !item.eadFormUrl.trim() ? 'no-ead' : ''}">
+        <span class="video-action-play">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Assistir Aula ↗
+        </span>
+        ${(item.hasEad !== false && item.eadFormUrl && item.eadFormUrl.trim() !== '') ? `
+          <button type="button" class="video-action-ead" data-action="ead" title="Fazer avaliação EAD deste treinamento sem precisar ver o vídeo">
+            <span>Fazer EAD</span>
+            <span>📝</span>
+          </button>
+        ` : ''}
+      </div>
+    </div>
+  `).join('');
+
+  videoCardsList.querySelectorAll('.video-item-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Se o usuário clicou diretamente no botão de Fazer EAD
+      const eadBtn = e.target.closest('.video-action-ead');
+      if (eadBtn) {
+        e.stopPropagation();
+        const subjectId = card.dataset.id;
+        openEadSubjectForm(subjectId);
+        return;
+      }
+
+      const embed = card.dataset.embed;
+      const url = card.dataset.url;
+      const title = card.dataset.title;
+      window.openVideoModal(embed, url, title);
+    });
+  });
+
 }
 
 // 6. RENDERIZAÇÃO DOS CARDS NA PÁGINA PRINCIPAL
@@ -1470,68 +2262,251 @@ function formatMarkdownText(text) {
 }
 
 // ==========================================================================
-// 9. RECURSOS PROGRESSIVE WEB APP (PWA) & INSTALAÇÃO EM CELULAR / PC
+// 9. RECURSOS PROGRESSIVE WEB APP (PWA), INSTALAÇÃO & ATUALIZAÇÕES AUTOMÁTICAS
 // ==========================================================================
-let deferredInstallPrompt = null;
-const pwaInstallBtn = document.getElementById('pwaInstallBtn');
-const pwaBottomBanner = document.getElementById('pwaBottomBanner');
-const pwaBannerInstallBtn = document.getElementById('pwaBannerInstallBtn');
-const pwaBannerCloseBtn = document.getElementById('pwaBannerCloseBtn');
-const pwaIosModal = document.getElementById('pwaIosModal');
-const pwaIosCloseBtn = document.getElementById('pwaIosCloseBtn');
-const pwaIosUnderstoodBtn = document.getElementById('pwaIosUnderstoodBtn');
-const toastContainer = document.getElementById('toastContainer');
+var deferredInstallPrompt = null;
+var swRegistration = null;
+var isUpdateWaiting = false;
+
+var pwaInstallBtn = null;
+var pwaBottomBanner = null;
+var pwaBannerInstallBtn = null;
+var pwaBannerCloseBtn = null;
+var pwaIosModal = null;
+var pwaIosCloseBtn = null;
+var pwaIosUnderstoodBtn = null;
+var toastContainer = null;
+
+// Elementos de Desinstalação e Fechamento
+var pwaUninstallBtn = null;
+var pwaUninstallModal = null;
+var pwaUninstallCloseBtn = null;
+var pwaUninstallCancelBtn = null;
+var pwaUninstallConfirmBtn = null;
+var pwaDismissBtn = null;
+
+// Elementos da barra compacta de instalação na página principal
+var siteAppInstallArea = null;
+var siteAppCard = null;
+var siteAppBadge = null;
+var siteAppTitle = null;
+var siteAppDesc = null;
+
+function cachePwaElements() {
+  pwaInstallBtn = document.getElementById('pwaInstallBtn');
+  pwaBottomBanner = document.getElementById('pwaBottomBanner');
+  pwaBannerInstallBtn = document.getElementById('pwaBannerInstallBtn');
+  pwaBannerCloseBtn = document.getElementById('pwaBannerCloseBtn');
+  pwaIosModal = document.getElementById('pwaIosModal');
+  pwaIosCloseBtn = document.getElementById('pwaIosCloseBtn');
+  pwaIosUnderstoodBtn = document.getElementById('pwaIosUnderstoodBtn');
+  toastContainer = document.getElementById('toastContainer');
+  
+  // Elementos do fluxo de desinstalação e fechamento
+  pwaUninstallBtn = document.getElementById('pwaUninstallBtn');
+  pwaUninstallModal = document.getElementById('pwaUninstallModal');
+  pwaUninstallCloseBtn = document.getElementById('pwaUninstallCloseBtn');
+  pwaUninstallCancelBtn = document.getElementById('pwaUninstallCancelBtn');
+  pwaUninstallConfirmBtn = document.getElementById('pwaUninstallConfirmBtn');
+  pwaDismissBtn = document.getElementById('pwaDismissBtn');
+
+  siteAppInstallArea = document.getElementById('siteAppInstallArea');
+  siteAppCard = document.querySelector('.site-app-install-card');
+  siteAppBadge = document.querySelector('.site-app-badge');
+  siteAppTitle = document.querySelector('.site-app-title');
+  siteAppDesc = document.querySelector('.site-app-desc');
+}
 
 // Detecção de ambiente iOS / Safari
-const isIos = () => {
-  const userAgent = window.navigator.userAgent.toLowerCase();
+function isIos() {
+  const userAgent = window.navigator.userAgent ? window.navigator.userAgent.toLowerCase() : '';
   return /iphone|ipad|ipod/.test(userAgent);
-};
+}
 
 // Detecção se já está instalado e rodando em modo standalone
-const isAppStandalone = () => {
-  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-};
+function isAppStandalone() {
+  return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || (window.navigator && window.navigator.standalone === true);
+}
 
-// Registro do Service Worker
-function registerServiceWorker() {
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then((reg) => {
-          console.log('[PWA] Service Worker registrado com sucesso no escopo:', reg.scope);
-          try { reg.update(); } catch (_) {}
-        })
-        .catch((err) => {
-          console.warn('[PWA] Falha no registro do Service Worker:', err);
-        });
-    });
+// Atualiza a interface quando uma nova versão do app estiver pronta para uso
+function setAppUpdateReady(waitingWorker) {
+  isUpdateWaiting = true;
+  console.log('[PWA] Nova versão detectada e pronta para ativação!');
+
+  if (siteAppCard) {
+    siteAppCard.classList.add('update-available');
   }
+
+  if (siteAppBadge) {
+    siteAppBadge.className = 'site-app-badge badge-update';
+    siteAppBadge.textContent = '⚡ NOVA ATUALIZAÇÃO DISPONÍVEL';
+  }
+
+  if (siteAppTitle) {
+    siteAppTitle.textContent = 'Nova Versão do Tutorial Disponível!';
+  }
+
+  if (siteAppDesc) {
+    siteAppDesc.textContent = 'Uma versão atualizada com novidades e melhorias foi baixada. Toque no botão para recarregar o app com a nova versão agora.';
+  }
+
+  if (pwaInstallBtn) {
+    pwaInstallBtn.className = 'btn-install-site-app btn-update-ready';
+    pwaInstallBtn.title = 'Toque para atualizar o aplicativo agora';
+    pwaInstallBtn.innerHTML = `
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 4 23 10 17 10"></polyline>
+        <polyline points="1 20 1 14 7 14"></polyline>
+        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+      </svg>
+      <span>⚡ Atualizar Aplicativo Agora</span>
+    `;
+  }
+
+  // Notificação toast destacada e clicável para atualização imediata
+  showUpdateToast();
+}
+
+// Aplica a atualização do Service Worker e recarrega a página
+function applyAppUpdate() {
+  if (swRegistration && swRegistration.waiting) {
+    showToast('⚡ Aplicando atualização do aplicativo...');
+    swRegistration.waiting.postMessage({ action: 'skipWaiting' });
+    setTimeout(() => {
+      window.location.reload(true);
+    }, 450);
+  } else {
+    showToast('Recarregando com a versão mais recente...');
+    window.location.reload(true);
+  }
+}
+
+// Notificação toast destacada com clique para atualizar
+function showUpdateToast() {
+  if (!toastContainer) return;
+  // Evita toasts duplicados de atualização
+  if (document.getElementById('pwaUpdateToastNotification')) return;
+
+  const toast = document.createElement('div');
+  toast.id = 'pwaUpdateToastNotification';
+  toast.className = 'pwa-toast';
+  toast.style.cssText = 'background: linear-gradient(135deg, #021a44 0%, #03286b 100%); border: 1.5px solid #f59e0b; color: #ffffff; cursor: pointer; padding: 14px 18px; box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);';
+  toast.innerHTML = `
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%;">
+      <div>
+        <div style="color: #fbbf24; font-weight: 800; font-size: 0.88rem; margin-bottom: 2px;">⚡ Nova Versão Disponível!</div>
+        <div style="font-size: 0.82rem; color: #e2e8f0;">Toque aqui para atualizar o aplicativo agora.</div>
+      </div>
+      <button type="button" style="background: #f59e0b; color: #0f172a; border: none; padding: 6px 12px; border-radius: 6px; font-weight: 800; font-size: 0.8rem; cursor: pointer; flex-shrink: 0;">ATUALIZAR</button>
+    </div>
+  `;
+
+  toast.addEventListener('click', applyAppUpdate);
+  toastContainer.appendChild(toast);
+}
+
+// Configura o estado da interface caso o app já esteja instalado e atualizado
+function setAppInstalledState() {
+  if (isUpdateWaiting) return;
+
+  // Se já estiver rodando como aplicativo na máquina (standalone), oculta a barra para manter o layout 100% limpo!
+  if (isAppStandalone() && siteAppInstallArea) {
+    siteAppInstallArea.style.display = 'none';
+    return;
+  }
+
+  if (siteAppBadge) {
+    siteAppBadge.textContent = 'APLICATIVO INSTALADO';
+  }
+  if (siteAppTitle) {
+    siteAppTitle.textContent = 'Aplicativo Tutorial';
+  }
+  if (siteAppDesc) {
+    siteAppDesc.textContent = '— Toque para verificar atualizações';
+  }
+
+  if (pwaUninstallBtn) {
+    pwaUninstallBtn.style.display = 'inline-flex';
+  }
+
+  if (pwaInstallBtn) {
+    pwaInstallBtn.className = 'btn-install-site-app btn-installed';
+    pwaInstallBtn.title = 'Toque para verificar se há atualizações';
+    pwaInstallBtn.innerHTML = `
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span>✓ Atualizado (Verificar)</span>
+    `;
+  }
+}
+
+// Registro do Service Worker e monitoramento contínuo de novas versões
+function registerServiceWorker() {
+  if (!('serviceWorker' in navigator)) return;
+
+  // Ao mudar de controlador (novo SW ativado), recarrega a página automaticamente
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!refreshing) {
+      refreshing = true;
+      window.location.reload();
+    }
+  });
+
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then((reg) => {
+        swRegistration = reg;
+        console.log('[PWA] Service Worker registrado no escopo:', reg.scope);
+
+        // Se já houver um worker em espera (waiting), sinaliza atualização disponível
+        if (reg.waiting) {
+          setAppUpdateReady(reg.waiting);
+          return;
+        }
+
+        // Monitora novas versões encontradas
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          if (!newWorker) return;
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed') {
+              if (navigator.serviceWorker.controller) {
+                // Atualização detectada em relação à versão anterior
+                setAppUpdateReady(newWorker);
+              }
+            }
+          });
+        });
+
+        // Verifica imediatamente se há atualizações no servidor
+        try {
+          reg.update();
+        } catch (_) {}
+      })
+      .catch((err) => {
+        console.warn('[PWA] Falha no registro do Service Worker:', err);
+      });
+  });
+
+  // Verifica atualizações sempre que o usuário retornar ao app / aba
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && swRegistration) {
+      swRegistration.update().catch(() => {});
+    }
+  });
 }
 
 // Inicialização dos eventos de instalação do PWA
 function initPwaInstall() {
+  cachePwaElements();
   registerServiceWorker();
 
-  // Se já estiver rodando como aplicativo instalado
+  // Se já estiver rodando em modo aplicativo standalone
   if (isAppStandalone()) {
-    if (pwaInstallBtn) {
-      pwaInstallBtn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-        <div class="app-btn-text">
-          <span class="btn-sub">MODO APLICATIVO</span>
-          <span class="btn-title">App Instalado ✓</span>
-        </div>
-      `;
-      pwaInstallBtn.style.opacity = '0.9';
-      pwaInstallBtn.title = 'Você já está utilizando o aplicativo instalado!';
-      pwaInstallBtn.addEventListener('click', () => {
-        showToast('Você já está utilizando este sistema como aplicativo instalado!');
-      });
-    }
-    return;
+    setAppInstalledState();
   }
 
   // Captura do evento beforeinstallprompt (Chrome, Edge, Android etc.)
@@ -1539,8 +2514,18 @@ function initPwaInstall() {
     e.preventDefault();
     deferredInstallPrompt = e;
 
-    // Exibe o botão no cabeçalho
-    if (pwaInstallBtn) pwaInstallBtn.style.display = 'flex';
+    // Se não estiver em modo standalone e não houver atualização pendente
+    if (!isAppStandalone() && !isUpdateWaiting && pwaInstallBtn) {
+      pwaInstallBtn.className = 'btn-install-site-app';
+      pwaInstallBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>Instalar App do Site</span>
+      `;
+    }
 
     // Exibe banner inferior se não tiver sido fechado nesta sessão
     if (!sessionStorage.getItem('pwa_banner_dismissed')) {
@@ -1552,14 +2537,14 @@ function initPwaInstall() {
     }
   });
 
-  // Ação ao clicar no botão de instalação do cabeçalho
+  // Ação ao clicar no botão principal (Instalação / Atualização / Verificação)
   if (pwaInstallBtn) {
-    pwaInstallBtn.addEventListener('click', triggerPwaInstall);
+    pwaInstallBtn.addEventListener('click', handlePwaButtonClick);
   }
 
   // Ação ao clicar no botão do banner flutuante
   if (pwaBannerInstallBtn) {
-    pwaBannerInstallBtn.addEventListener('click', triggerPwaInstall);
+    pwaBannerInstallBtn.addEventListener('click', handlePwaButtonClick);
   }
 
   // Fechar banner inferior
@@ -1573,20 +2558,44 @@ function initPwaInstall() {
   // Evento disparado quando o app é instalado com sucesso
   window.addEventListener('appinstalled', () => {
     deferredInstallPrompt = null;
-    if (pwaInstallBtn) {
-      pwaInstallBtn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-        <div class="app-btn-text">
-          <span class="btn-sub">CONCLUÍDO</span>
-          <span class="btn-title">App Instalado ✓</span>
-        </div>
-      `;
-    }
+    setAppInstalledState();
     if (pwaBottomBanner) pwaBottomBanner.style.display = 'none';
-    showToast('🎉 Parabéns! Aplicativo instalado com sucesso no seu dispositivo.');
+    showToast('🎉 Parabéns! O aplicativo Tutorial foi instalado com sucesso.');
   });
+
+  // Ação de fechar a barra de instalação compacta
+  if (pwaDismissBtn) {
+    pwaDismissBtn.addEventListener('click', () => {
+      if (siteAppInstallArea) siteAppInstallArea.style.display = 'none';
+      sessionStorage.setItem('site_app_bar_dismissed', 'true');
+    });
+  }
+
+  // Se já foi dispensada nesta sessão ou se já está rodando como app instalado, oculta a barra
+  if (siteAppInstallArea) {
+    if (sessionStorage.getItem('site_app_bar_dismissed') === 'true' || (isAppStandalone() && !isUpdateWaiting)) {
+      siteAppInstallArea.style.display = 'none';
+    }
+  }
+
+  // Ações de desinstalação do aplicativo
+  if (pwaUninstallBtn) {
+    pwaUninstallBtn.addEventListener('click', openUninstallModal);
+  }
+  if (pwaUninstallCloseBtn) {
+    pwaUninstallCloseBtn.addEventListener('click', closeUninstallModal);
+  }
+  if (pwaUninstallCancelBtn) {
+    pwaUninstallCancelBtn.addEventListener('click', closeUninstallModal);
+  }
+  if (pwaUninstallConfirmBtn) {
+    pwaUninstallConfirmBtn.addEventListener('click', executeAppUninstall);
+  }
+  if (pwaUninstallModal) {
+    pwaUninstallModal.addEventListener('click', (e) => {
+      if (e.target === pwaUninstallModal) closeUninstallModal();
+    });
+  }
 
   // Fechar modal do iOS
   if (pwaIosCloseBtn) {
@@ -1608,33 +2617,136 @@ function initPwaInstall() {
   }
 }
 
-// Disparador do fluxo de instalação
-function triggerPwaInstall() {
-  if (isAppStandalone()) {
-    showToast('Você já está utilizando a versão instalada!');
+// Disparador inteligente do botão: Atualizar / Verificar / Instalar
+function handlePwaButtonClick() {
+  // CASO 1: Há uma atualização aguardando
+  if (isUpdateWaiting) {
+    applyAppUpdate();
     return;
   }
 
-  // Se for iOS (Safari), abre guia ilustrado de instalação
+  // CASO 2: App já está instalado (ou em modo standalone) -> Funciona como botão de verificação/atualização
+  if (isAppStandalone()) {
+    showToast('🔍 Verificando se há atualizações no servidor...');
+    if (swRegistration) {
+      swRegistration.update()
+        .then(() => {
+          setTimeout(() => {
+            if (!isUpdateWaiting) {
+              showToast('✓ Seu aplicativo já está atualizado na versão mais recente!');
+            }
+          }, 1200);
+        })
+        .catch(() => {
+          showToast('✓ Aplicativo em funcionamento na versão mais recente.');
+        });
+    } else {
+      setTimeout(() => {
+        showToast('✓ Seu aplicativo já está atualizado na versão mais recente!');
+      }, 800);
+    }
+    return;
+  }
+
+  // CASO 3: Usuário ainda não instalou o aplicativo
+  // Se for iOS (Safari), abre o guia ilustrado
   if (isIos()) {
     openIosModal();
     return;
   }
 
-  // Se o navegador suportar beforeinstallprompt
+  // Se o navegador suportar o evento padrão de instalação
   if (deferredInstallPrompt) {
     deferredInstallPrompt.prompt();
     deferredInstallPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
-        showToast('Instalando aplicativo...');
+        showToast('Instalando aplicativo Tutorial...');
       }
       deferredInstallPrompt = null;
       if (pwaBottomBanner) pwaBottomBanner.style.display = 'none';
     });
   } else {
-    // Para navegadores desktop que não dispararam beforeinstallprompt ou caso o usuário use outro browser
-    showToast('💡 Para instalar: toque no menu do seu navegador (⋮ ou Compartilhar) e escolha "Instalar Aplicativo" ou "Adicionar à tela inicial".', 6000);
+    // Para navegadores desktop que não dispararam beforeinstallprompt ou caso o usuário queira verificar
+    if (swRegistration) {
+      showToast('🔍 Verificando se há atualizações no servidor...');
+      swRegistration.update()
+        .then(() => {
+          setTimeout(() => {
+            if (!isUpdateWaiting) {
+              showToast('💡 Para instalar: toque no menu (⋮ ou Compartilhar) do navegador e escolha "Instalar Aplicativo" ou "Adicionar à tela inicial".', 6000);
+            }
+          }, 1000);
+        })
+        .catch(() => {
+          showToast('💡 Para instalar: toque no menu do seu navegador e escolha "Instalar Aplicativo".', 5000);
+        });
+    } else {
+      showToast('💡 Para instalar: toque no menu do seu navegador (⋮ ou Compartilhar) e escolha "Instalar Aplicativo" ou "Adicionar à tela inicial".', 6000);
+    }
   }
+}
+
+// Modal de Desinstalação
+function openUninstallModal() {
+  if (pwaUninstallModal) {
+    pwaUninstallModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeUninstallModal() {
+  if (pwaUninstallModal) {
+    pwaUninstallModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Execução da Desinstalação completa (Service Worker + Caches + Redefinição)
+function executeAppUninstall() {
+  closeUninstallModal();
+
+  // Oculta a barra imediatamente da tela
+  if (siteAppInstallArea) {
+    siteAppInstallArea.style.display = 'none';
+  }
+  sessionStorage.setItem('site_app_bar_dismissed', 'true');
+
+  showToast('🗑️ Desativando aplicativo e limpando caches...');
+
+  const cleanups = [];
+
+  // Desregistra todos os Service Workers
+  if ('serviceWorker' in navigator) {
+    cleanups.push(
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        return Promise.all(registrations.map(reg => reg.unregister()));
+      }).catch(() => {})
+    );
+  }
+
+  // Esvazia todos os caches do navegador
+  if ('caches' in window) {
+    cleanups.push(
+      caches.keys().then((keys) => {
+        return Promise.all(keys.map(k => caches.delete(k)));
+      }).catch(() => {})
+    );
+  }
+
+  Promise.all(cleanups).then(() => {
+    try {
+      sessionStorage.clear();
+    } catch (_) {}
+
+    showToast('✓ Caches limpos! Para remover o ícone do Windows: clique nos 3 pontinhos (...) no canto superior da janela > "Desinstalar Tutorial".', 8000);
+
+    setTimeout(() => {
+      window.location.reload(true);
+    }, 2400);
+  }).catch(() => {
+    showToast('✓ Caches desinstalados. Recarregando...');
+    setTimeout(() => window.location.reload(true), 1200);
+  });
 }
 
 function openIosModal() {
