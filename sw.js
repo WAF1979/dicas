@@ -3,7 +3,7 @@
  * Suporte completo a Progressive Web App (PWA), atualizações automáticas e funcionamento offline
  */
 
-const CACHE_NAME = 'tutorial-app-v113';
+const CACHE_NAME = 'tutorial-app-v121';
 const STATIC_ASSETS = [
   './',
   './index.html',
@@ -41,10 +41,15 @@ self.addEventListener('message', (event) => {
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(STATIC_ASSETS).catch((err) => {
-        console.warn('[SW] Aviso ao adicionar recursos ao cache:', err);
-      });
+    caches.open(CACHE_NAME).then(async (cache) => {
+      // Adiciona cada recurso com tolerância a falhas para garantir instalação sempre bem-sucedida
+      await Promise.allSettled(
+        STATIC_ASSETS.map((asset) =>
+          cache.add(asset).catch((err) => {
+            console.warn('[SW] Aviso ao pré-carregar recurso:', asset, err);
+          })
+        )
+      );
     })
   );
 });

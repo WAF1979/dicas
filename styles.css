@@ -47,13 +47,50 @@ html, body {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  background-color: #020f26;
+  color: #ffffff;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* ==========================================================================
+   ZOOM PADRÃO DE 67% PARA COMPUTADOR / DESKTOP (AJUSTA TELA COMPLETA SEM ROLAGEM EXCESSIVA)
+   ========================================================================== */
+/* @media (min-width: 1025px) {
+  body {
+    zoom: 0%;
+  }
+} */
+
+/* ==========================================================================
+   BACKGROUND DE TELA INTEIRA (OCUPANDO 100% DA TELA E DO DISPOSITIVO)
+   ========================================================================== */
+.site-fullscreen-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -2;
+  filter: brightness(0.86) contrast(1.08);
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+.site-fullscreen-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 25%, rgba(3, 23, 61, 0.42) 0%, rgba(2, 14, 38, 0.78) 100%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 h1, h2, h3, h4, h5, h6, 
@@ -81,14 +118,18 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ==========================================================================
-   CABEÇALHO INSTITUCIONAL (HEADER)
+   CABEÇALHO INSTITUCIONAL (HEADER EM VIDRO FROSTED GLASS)
    ========================================================================== */
 .app-header {
-  background: linear-gradient(135deg, #03173d 0%, #005a96 60%, #0088cc 100%);
+  background: rgba(3, 23, 61, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   color: #ffffff;
-  padding: clamp(12px, 2vw, 18px) 0;
-  box-shadow: 0 4px 12px rgba(3, 23, 61, 0.15);
-  border-bottom: 3px solid var(--accent-cyan);
+  padding: clamp(14px, 2.2vw, 20px) 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  border-bottom: 2px solid rgba(0, 188, 255, 0.4);
+  position: relative;
+  z-index: 10;
 }
 
 .header-content {
@@ -103,6 +144,28 @@ h1, h2, h3, h4, h5, h6,
   display: flex;
   align-items: center;
   gap: clamp(10px, 2vw, 18px);
+}
+
+.brand-header-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 188, 255, 0.22) 0%, rgba(2, 132, 199, 0.35) 100%);
+  border: 1.5px solid rgba(0, 188, 255, 0.6);
+  box-shadow: 0 4px 14px rgba(0, 188, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00bcff;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.brand-header-icon:hover {
+  transform: scale(1.08) rotate(-4deg);
+  border-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 188, 255, 0.55);
+  color: #ffffff;
 }
 
 .brand-header-text {
@@ -122,6 +185,7 @@ h1, h2, h3, h4, h5, h6,
   font-size: clamp(0.75rem, 2.5vw, 0.85rem);
   color: #cbd5e1;
   font-weight: 400;
+  margin-top: 4px;
 }
 
 .header-right-actions {
@@ -230,58 +294,80 @@ h1, h2, h3, h4, h5, h6,
 .full-bleed-banner {
   width: 100%;
   max-width: 100vw;
-  margin-bottom: clamp(20px, 4vw, 32px);
-  overflow: hidden;
+  margin-bottom: clamp(16px, 3vw, 24px);
+  overflow: visible;
 }
 
 .wind-hero-banner {
   position: relative;
   width: 100%;
-  min-height: clamp(340px, 45vh, 460px);
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 4px solid var(--accent-cyan);
-  box-shadow: 0 8px 30px rgba(3, 23, 61, 0.25);
-  padding: clamp(16px, 3vw, 30px) 0;
-  overflow: hidden;
+  border-bottom: none;
+  box-shadow: none;
+  background: transparent;
+  padding: clamp(24px, 4vw, 40px) 0 clamp(16px, 2.5vw, 24px) 0;
+  overflow: visible;
 }
 
 .hero-bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  filter: brightness(0.92) contrast(1.08);
-  transform: scale(1);
-  transition: transform 10s ease;
-  z-index: 1;
-}
-
-.wind-hero-banner:hover .hero-bg-image {
-  transform: scale(1.03);
+  display: none !important;
 }
 
 .hero-subtle-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(3, 23, 61, 0.2) 0%, rgba(3, 23, 61, 0.25) 100%);
-  z-index: 2;
+  display: none !important;
 }
 
 /* EFEITOS DE VENTO & BOLINHAS ILUMINADAS ANIMADAS NA LOGO / BACKGROUND */
 .wind-particles-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* CONTAINER DOS FEIXES DE LUZ HORIZONTAIS COM MÁSCARA FORA DOS CARTÕES */
+.wind-lines-zone {
   position: absolute;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 3;
+}
+
+/* NO DESKTOP, MASCARA OS FEIXES PARA NUNCA PASSAREM DENTRO DOS CARTÕES CENTRAIS */
+@media (min-width: 981px) {
+  .wind-lines-zone {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #000 0%,
+      #000 calc(50% - 500px),
+      transparent calc(50% - 460px),
+      transparent calc(50% + 460px),
+      #000 calc(50% + 500px),
+      #000 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      #000 0%,
+      #000 calc(50% - 500px),
+      transparent calc(50% - 460px),
+      transparent calc(50% + 460px),
+      #000 calc(50% + 500px),
+      #000 100%
+    );
+  }
+}
+
+/* EM TELAS MENORES / SMARTPHONES, OCULTA OS FEIXES PARA NÃO ATRAVESSAREM OS CARTÕES */
+@media (max-width: 980px) {
+  .wind-lines-zone {
+    display: none !important;
+  }
 }
 
 .wind-line {
@@ -293,16 +379,16 @@ h1, h2, h3, h4, h5, h6,
   animation: windStream linear infinite;
 }
 
-.line-1 { top: 18%; width: 280px; animation-duration: 4.0s; animation-delay: 0s; }
-.line-2 { top: 38%; width: 400px; animation-duration: 3.0s; animation-delay: 1.2s; }
-.line-3 { top: 62%; width: 240px; animation-duration: 4.8s; animation-delay: 0.3s; }
-.line-4 { top: 78%; width: 350px; animation-duration: 3.4s; animation-delay: 2.0s; }
+.line-1 { top: 18%; width: 320px; animation-duration: 4.0s; animation-delay: 0s; }
+.line-2 { top: 38%; width: 420px; animation-duration: 3.2s; animation-delay: 1.2s; }
+.line-3 { top: 62%; width: 280px; animation-duration: 4.8s; animation-delay: 0.3s; }
+.line-4 { top: 78%; width: 380px; animation-duration: 3.4s; animation-delay: 2.0s; }
 
 @keyframes windStream {
-  0% { transform: translateX(-400px) translateY(0); opacity: 0; }
-  20% { opacity: 0.9; }
-  80% { opacity: 0.9; }
-  100% { transform: translateX(1100px) translateY(-20px); opacity: 0; }
+  0% { transform: translateX(-450px) translateY(0); opacity: 0; }
+  15% { opacity: 0.95; }
+  85% { opacity: 0.95; }
+  100% { transform: translateX(calc(100vw + 450px)) translateY(-20px); opacity: 0; }
 }
 
 /* ESTILIZAÇÃO E ANIMAÇÃO DOS CIFRÕES ($) ILUMINADOS FLUTUANTES */
@@ -489,16 +575,22 @@ color: #01ffff;
 
 /* PAINEL DE VIDRO CORPORATIVO COM LINHAS SEPARADORAS */
 .hero-glass-box-subtle {
-  background: rgba(3, 23, 61, 0.52);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: clamp(14px, 3vw, 20px);
-  padding: clamp(20px, 4vw, 34px) clamp(20px, 4vw, 38px);
+  background: rgba(3, 23, 61, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(0, 188, 255, 0.55);
+  border-radius: clamp(16px, 3vw, 22px);
+  padding: clamp(22px, 4vw, 36px) clamp(22px, 4vw, 40px);
   color: #ffffff;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 35px rgba(0, 188, 255, 0.25);
   max-width: 960px;
   margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.hero-glass-box-subtle:hover {
+  border-color: rgba(0, 188, 255, 0.8);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 45px rgba(0, 188, 255, 0.35);
 }
 
 .hero-clean-badge {
@@ -662,6 +754,8 @@ color: #01ffff;
    BOTÃO DESTACADO E BONITO: MENSAGENS / AJUDA DO SISTEMA
    ========================================================================== */
 .main-content {
+  position: relative;
+  z-index: 2;
   padding-bottom: 50px;
 }
 
@@ -674,7 +768,7 @@ color: #01ffff;
 .system-help-menu-btn {
   width: 100%;
   max-width: 860px;
-  background: linear-gradient(135deg, #03173d 0%, #005a96 50%, #0088cc 100%);
+  background: linear-gradient(135deg, rgba(3, 23, 61, 0.65) 0%, rgba(0, 90, 150, 0.85) 50%, rgba(0, 136, 204, 0.85) 100%);
   border: 2.5px solid var(--accent-cyan);
   border-radius: var(--radius-lg);
   padding: clamp(18px, 3.5vw, 26px) clamp(20px, 4vw, 32px);
@@ -688,6 +782,7 @@ color: #01ffff;
   position: relative;
   overflow: hidden;
   text-align: center;
+
 }
 
 .system-help-menu-btn::before {
@@ -1400,10 +1495,9 @@ color: #01ffff;
    ========================================================================== */
 .modal-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(3, 23, 61, 0.75);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -2240,9 +2334,9 @@ button.direct-web-link {
   }
 
   .wind-hero-banner {
-    min-height: 280px;
+    min-height: 310px;
     width: 100%;
-    padding: 14px 0;
+    padding: 16px 0;
     overflow: hidden;
   }
 
@@ -2254,7 +2348,7 @@ button.direct-web-link {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center center;
+    background-position: center 15% !important;
     background-repeat: no-repeat;
   }
 
@@ -2906,8 +3000,8 @@ button.direct-web-link {
 .video-fullscreen-modal {
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 99999;
   display: flex;
   align-items: center;
@@ -3328,9 +3422,11 @@ button.direct-web-link {
 
 /* NOVO BOTÃO DE TREINAMENTOS & EAD COM GRADIENTE AZUL/CIANO HIGH-TECH */
 .training-menu-btn {
-  background: linear-gradient(135deg, #061129 0%, #1e293b 40%, #0369a1 85%, #06b6d4 100%) !important;
+  background: linear-gradient(135deg, rgba(6, 17, 41, 0.65) 0%, rgba(30, 41, 59, 0.65) 40%, rgba(3, 105, 161, 0.25) 85%, rgba(6, 182, 212, 0.20) 100%) !important;
   border-color: #38bdf8 !important;
   box-shadow: 0 12px 35px rgba(2, 132, 199, 0.4), 0 0 25px rgba(56, 189, 248, 0.25) !important;
+  backdrop-filter: blur(9px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
 }
 
 .training-menu-btn:hover {

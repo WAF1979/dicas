@@ -3,6 +3,18 @@
  * (FLUXO INTERATIVO ENTRE BOTÃO DESTACADO, MODAL DE MENU DE AJUDA COM BUSCA INTELIGENTE E MODAL DE SOLUÇÃO)
  */
 
+// Captura imediata no topo do script para o evento PWA antes de qualquer processamento
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  window._pwaDeferredPrompt = e;
+  if (typeof deferredInstallPrompt !== 'undefined') {
+    deferredInstallPrompt = e;
+  }
+  if (typeof updatePwaInstallButtonState === 'function') {
+    updatePwaInstallButtonState();
+  }
+});
+
 // 1. BASE DE DADOS DE ERROS & DIAGNÓSTICOS DO SISTEMA (EM ORDEM ALFABÉTICA)
 const HELP_DATA = [
   {
@@ -2343,7 +2355,7 @@ function setAppUpdateReady(waitingWorker) {
   }
 
   if (siteAppTitle) {
-    siteAppTitle.textContent = 'Nova Versão do Tutorial Disponível!';
+    siteAppTitle.textContent = 'Nova Versão da Universidade Unifort Disponível!';
   }
 
   if (siteAppDesc) {
@@ -2419,7 +2431,7 @@ function setAppInstalledState() {
     siteAppBadge.textContent = 'APLICATIVO INSTALADO';
   }
   if (siteAppTitle) {
-    siteAppTitle.textContent = 'Aplicativo Tutorial';
+    siteAppTitle.textContent = 'Aplicativo Universidade Unifort';
   }
   if (siteAppDesc) {
     siteAppDesc.textContent = '— Toque para verificar atualizações';
@@ -2499,38 +2511,49 @@ function registerServiceWorker() {
   });
 }
 
+// Atualiza o visual do botão de instalação quando o evento PWA for capturado
+function updatePwaInstallButtonState() {
+  if (!isAppStandalone() && !isUpdateWaiting && pwaInstallBtn) {
+    pwaInstallBtn.className = 'btn-install-site-app';
+    pwaInstallBtn.innerHTML = `
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      <span>Instalar App do Site</span>
+    `;
+  }
+}
+
 // Inicialização dos eventos de instalação do PWA
 function initPwaInstall() {
   cachePwaElements();
   registerServiceWorker();
 
+  // Se já capturamos o evento precocemente no carregamento inicial
+  if (window._pwaDeferredPrompt && !deferredInstallPrompt) {
+    deferredInstallPrompt = window._pwaDeferredPrompt;
+  }
+
   // Se já estiver rodando em modo aplicativo standalone
   if (isAppStandalone()) {
     setAppInstalledState();
+  } else {
+    updatePwaInstallButtonState();
   }
 
   // Captura do evento beforeinstallprompt (Chrome, Edge, Android etc.)
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredInstallPrompt = e;
-
-    // Se não estiver em modo standalone e não houver atualização pendente
-    if (!isAppStandalone() && !isUpdateWaiting && pwaInstallBtn) {
-      pwaInstallBtn.className = 'btn-install-site-app';
-      pwaInstallBtn.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="7 10 12 15 17 10"></polyline>
-          <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg>
-        <span>Instalar App do Site</span>
-      `;
-    }
+    window._pwaDeferredPrompt = e;
+    updatePwaInstallButtonState();
 
     // Exibe banner inferior se não tiver sido fechado nesta sessão
     if (!sessionStorage.getItem('pwa_banner_dismissed')) {
       setTimeout(() => {
-        if (pwaBottomBanner && deferredInstallPrompt && !isAppStandalone()) {
+        if (pwaBottomBanner && (deferredInstallPrompt || window._pwaDeferredPrompt) && !isAppStandalone()) {
           pwaBottomBanner.style.display = 'block';
         }
       }, 2500);
@@ -2558,9 +2581,10 @@ function initPwaInstall() {
   // Evento disparado quando o app é instalado com sucesso
   window.addEventListener('appinstalled', () => {
     deferredInstallPrompt = null;
+    window._pwaDeferredPrompt = null;
     setAppInstalledState();
     if (pwaBottomBanner) pwaBottomBanner.style.display = 'none';
-    showToast('🎉 Parabéns! O aplicativo Tutorial foi instalado com sucesso.');
+    showToast('🎉 Parabéns! O aplicativo Universidade Unifort foi instalado com sucesso.');
   });
 
   // Ação de fechar a barra de instalação compacta
@@ -2610,6 +2634,22 @@ function initPwaInstall() {
     });
   }
 
+  // Fechar modal de ajuda de instalação geral
+  const pwaInstallHelpModal = document.getElementById('pwaInstallHelpModal');
+  const pwaInstallHelpCloseBtn = document.getElementById('pwaInstallHelpCloseBtn');
+  const pwaInstallHelpOkBtn = document.getElementById('pwaInstallHelpOkBtn');
+  if (pwaInstallHelpCloseBtn) {
+    pwaInstallHelpCloseBtn.addEventListener('click', closePwaInstallHelpModal);
+  }
+  if (pwaInstallHelpOkBtn) {
+    pwaInstallHelpOkBtn.addEventListener('click', closePwaInstallHelpModal);
+  }
+  if (pwaInstallHelpModal) {
+    pwaInstallHelpModal.addEventListener('click', (e) => {
+      if (e.target === pwaInstallHelpModal) closePwaInstallHelpModal();
+    });
+  }
+
   // Verificação de atalho na URL (?action=open-catalog)
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('action') === 'open-catalog') {
@@ -2655,34 +2695,45 @@ function handlePwaButtonClick() {
     return;
   }
 
-  // Se o navegador suportar o evento padrão de instalação
-  if (deferredInstallPrompt) {
-    deferredInstallPrompt.prompt();
-    deferredInstallPrompt.userChoice.then((choiceResult) => {
+  // Se o navegador disponibilizou o prompt nativo de instalação
+  const promptEvent = deferredInstallPrompt || window._pwaDeferredPrompt;
+  if (promptEvent) {
+    promptEvent.prompt();
+    promptEvent.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
-        showToast('Instalando aplicativo Tutorial...');
+        showToast('🎉 Instalando Universidade Unifort...');
       }
       deferredInstallPrompt = null;
+      window._pwaDeferredPrompt = null;
       if (pwaBottomBanner) pwaBottomBanner.style.display = 'none';
+    }).catch(() => {
+      openPwaInstallHelpModal();
     });
   } else {
-    // Para navegadores desktop que não dispararam beforeinstallprompt ou caso o usuário queira verificar
-    if (swRegistration) {
-      showToast('🔍 Verificando se há atualizações no servidor...');
-      swRegistration.update()
-        .then(() => {
-          setTimeout(() => {
-            if (!isUpdateWaiting) {
-              showToast('💡 Para instalar: toque no menu (⋮ ou Compartilhar) do navegador e escolha "Instalar Aplicativo" ou "Adicionar à tela inicial".', 6000);
-            }
-          }, 1000);
-        })
-        .catch(() => {
-          showToast('💡 Para instalar: toque no menu do seu navegador e escolha "Instalar Aplicativo".', 5000);
-        });
-    } else {
-      showToast('💡 Para instalar: toque no menu do seu navegador (⋮ ou Compartilhar) e escolha "Instalar Aplicativo" ou "Adicionar à tela inicial".', 6000);
-    }
+    // Se o evento nativo não estiver pronto ou disponível, abre o guia com instruções visuais claras
+    openPwaInstallHelpModal();
+  }
+}
+
+// Modal de Ajuda de Instalação (Guia passo a passo com alerta HTTPS)
+function openPwaInstallHelpModal() {
+  const modal = document.getElementById('pwaInstallHelpModal');
+  const httpsAlert = document.getElementById('pwaHttpsAlertBox');
+  if (httpsAlert) {
+    const isSecure = window.isSecureContext || window.location.protocol === 'https:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    httpsAlert.style.display = isSecure ? 'none' : 'block';
+  }
+  if (modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closePwaInstallHelpModal() {
+  const modal = document.getElementById('pwaInstallHelpModal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
   }
 }
 
@@ -2738,7 +2789,7 @@ function executeAppUninstall() {
       sessionStorage.clear();
     } catch (_) {}
 
-    showToast('✓ Caches limpos! Para remover o ícone do Windows: clique nos 3 pontinhos (...) no canto superior da janela > "Desinstalar Tutorial".', 8000);
+    showToast('✓ Caches limpos! Para remover o ícone do Windows: clique nos 3 pontinhos (...) no canto superior da janela > "Desinstalar Universidade Unifort".', 8000);
 
     setTimeout(() => {
       window.location.reload(true);

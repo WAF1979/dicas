@@ -1,12 +1,12 @@
 {
-  "id": "unifort-hotsales-ajuda-pwa",
-  "name": "Tutorial",
-  "short_name": "Tutorial",
+  "id": "./index.html?source=pwa",
+  "name": "Universidade Unifort",
+  "short_name": "UniFort",
   "description": "Universidade Unifort - Aprenda a utilizar. Descubra soluções. Simplifique suas tarefas.",
   "start_url": "./index.html?source=pwa",
   "scope": "./",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "display_override": ["standalone", "minimal-ui", "window-controls-overlay"],
   "orientation": "any",
   "background_color": "#03173d",
   "theme_color": "#03173d",
@@ -75,7 +75,7 @@
       "name": "Acessar Sistema Web",
       "short_name": "Web UniFort",
       "description": "Acesso direto à plataforma web HotSales UniFort",
-      "url": "https://webunifort.hotsales.com.br/#/login",
+      "url": "./index.html?action=web-login",
       "icons": [
         {
           "src": "assets/icons/icon-96x96.png",
