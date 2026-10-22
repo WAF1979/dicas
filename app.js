@@ -659,65 +659,66 @@ const VIDEOS_DATA = [
 // ==========================================================================
 const DOCS_DATA = [
   {
-    id: 'doc-manual-hotsales',
-    title: 'Manual de Utilização - HotSales',
-    category: 'hotsales',
-    categoryLabel: 'HotSales',
-    description: 'Instruções completas sobre o uso e funcionalidades do aplicativo HotSales.',
-    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Substitua pelo link do seu arquivo PDF
-    fileSize: '2.4 MB',
-    pages: '24 págs'
+    // id: 'doc-manual-hotsales',
+    id: 'doc-linha_pesada',
+    title: 'Manual Linha Pesada',
+    category: 'Unifort',
+    categoryLabel: 'Unifort',
+    description: 'Treinamento técnico comercial',
+    pdfUrl: 'https://docs.google.com/presentation/d/16GcCRQG5eJyBb6sAlI-6NpQdlfjgda20/preview', // Substitua pelo link do seu arquivo PDF
+    // fileSize: '2.4 MB',
+    pages: '15 págs'
   },
   {
-    id: 'doc-produtos-recomendados',
-    title: 'Guia de Produtos Recomendados & Substitutos',
-    category: 'hotsales',
-    categoryLabel: 'HotSales',
-    description: 'Instruções sobre como consultar e aplicar produtos substitutos e recomendados no pedido.',
-    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-    fileSize: '1.2 MB',
-    pages: '10 págs'
-  },
-  {
-    id: 'doc-diretrizes-marketing',
-    title: 'Diretrizes de Marketing UniFort',
-    category: 'marketing',
-    categoryLabel: 'Marketing',
-    description: 'Guia institucional com orientações de marca, promoções e relacionamento comercial.',
-    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-    fileSize: '3.0 MB',
-    pages: '18 págs'
-  },
-  {
-    id: 'doc-procedimentos-logistica',
-    title: 'Procedimentos de Logística e Fretes',
-    category: 'logistica',
-    categoryLabel: 'Logística',
-    description: 'Normas de expedição, consulta de transportadoras e acompanhamento de entregas.',
-    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-    fileSize: '1.9 MB',
-    pages: '14 págs'
-  },
-  {
-    id: 'doc-politica-credito',
-    title: 'Manual de Políticas de Crédito',
-    category: 'credito',
-    categoryLabel: 'Crédito',
-    description: 'Critérios de aprovação de crédito, prazos de pagamento e liberação de pedidos.',
-    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-    fileSize: '1.5 MB',
-    pages: '12 págs'
-  },
-  {
-    id: 'doc-manual-institucional',
-    title: 'Manual Institucional & Cultura UniFort',
-    category: 'institucional',
-    categoryLabel: 'Institucional',
-    description: 'Valores corporativos, código de conduta e diretrizes da Universidade Unifort.',
-    pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-    fileSize: '2.8 MB',
-    pages: '22 págs'
+    id: 'doc-Material_Paquimetro',
+    title: 'Guia prático do Paquímetro',
+    category: 'Unifort',
+    categoryLabel: 'Unifort',
+    description: 'Domínio da fixação: Guia pratico do Paquímetro.',
+    pdfUrl: 'https://drive.google.com/file/d/11Unhu7lW86WQ7rA7CMXUszNNhD_wSf2O/preview',
+    // fileSize: '1.2 MB',
+    pages: '15 págs'
   }
+  // {
+  //   id: 'doc-diretrizes-marketing',
+  //   title: 'Diretrizes de Marketing UniFort',
+  //   category: 'marketing',
+  //   categoryLabel: 'Marketing',
+  //   description: 'Guia institucional com orientações de marca, promoções e relacionamento comercial.',
+  //   pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+  //   fileSize: '3.0 MB',
+  //   pages: '18 págs'
+  // },
+  // {
+  //   id: 'doc-procedimentos-logistica',
+  //   title: 'Procedimentos de Logística e Fretes',
+  //   category: 'logistica',
+  //   categoryLabel: 'Logística',
+  //   description: 'Normas de expedição, consulta de transportadoras e acompanhamento de entregas.',
+  //   pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+  //   fileSize: '1.9 MB',
+  //   pages: '14 págs'
+  // },
+  // {
+  //   id: 'doc-politica-credito',
+  //   title: 'Manual de Políticas de Crédito',
+  //   category: 'credito',
+  //   categoryLabel: 'Crédito',
+  //   description: 'Critérios de aprovação de crédito, prazos de pagamento e liberação de pedidos.',
+  //   pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+  //   fileSize: '1.5 MB',
+  //   pages: '12 págs'
+  // },
+  // {
+  //   id: 'doc-manual-institucional',
+  //   title: 'Manual Institucional & Cultura UniFort',
+  //   category: 'institucional',
+  //   categoryLabel: 'Institucional',
+  //   description: 'Valores corporativos, código de conduta e diretrizes da Universidade Unifort.',
+  //   pdfUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+  //   fileSize: '2.8 MB',
+  //   pages: '22 págs'
+  // }
 ];
 
 // VARIÁVEIS DE CONTROLE DE FLUXO DA NAVEGAÇÃO E FILTROS

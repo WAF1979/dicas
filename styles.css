@@ -57,14 +57,7 @@ body {
   position: relative;
 }
 
-/* ==========================================================================
-   ZOOM PADRÃO DE 67% PARA COMPUTADOR / DESKTOP (AJUSTA TELA COMPLETA SEM ROLAGEM EXCESSIVA)
-   ========================================================================== */
-/* @media (min-width: 1025px) {
-  body {
-    zoom: 0%;
-  }
-} */
+
 
 /* ==========================================================================
    BACKGROUND DE TELA INTEIRA (OCUPANDO 100% DA TELA E DO DISPOSITIVO)
@@ -320,7 +313,17 @@ h1, h2, h3, h4, h5, h6,
   display: none !important;
 }
 
-/* EFEITOS DE VENTO & BOLINHAS ILUMINADAS ANIMADAS NA LOGO / BACKGROUND */
+/* ==========================================================================
+   EFEITOS DE VENTO & BOLINHAS ILUMINADAS (DESATIVADOS / COMENTADOS PARA DESEMPENHO NO CELULAR)
+   Para reativar futuramente: remova os delimitadores de comentário deste bloco
+   e descomente também o bloco correspondente no index.html.
+   ========================================================================== */
+.wind-particles-wrapper {
+  display: none !important;
+}
+
+/*
+// EFEITOS DE VENTO & BOLINHAS ILUMINADAS ANIMADAS NA LOGO / BACKGROUND
 .wind-particles-wrapper {
   position: fixed;
   inset: 0;
@@ -331,7 +334,7 @@ h1, h2, h3, h4, h5, h6,
   z-index: 0;
 }
 
-/* CONTAINER DOS FEIXES DE LUZ HORIZONTAIS COM MÁSCARA FORA DOS CARTÕES */
+// CONTAINER DOS FEIXES DE LUZ HORIZONTAIS COM MÁSCARA FORA DOS CARTÕES
 .wind-lines-zone {
   position: absolute;
   inset: 0;
@@ -339,7 +342,7 @@ h1, h2, h3, h4, h5, h6,
   overflow: hidden;
 }
 
-/* NO DESKTOP, MASCARA OS FEIXES PARA NUNCA PASSAREM DENTRO DOS CARTÕES CENTRAIS */
+// NO DESKTOP, MASCARA OS FEIXES PARA NUNCA PASSAREM DENTRO DOS CARTÕES CENTRAIS
 @media (min-width: 981px) {
   .wind-lines-zone {
     -webkit-mask-image: linear-gradient(
@@ -363,7 +366,7 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-/* EM TELAS MENORES / SMARTPHONES, OCULTA OS FEIXES PARA NÃO ATRAVESSAREM OS CARTÕES */
+// EM TELAS MENORES / SMARTPHONES, OCULTA OS FEIXES PARA NÃO ATRAVESSAREM OS CARTÕES
 @media (max-width: 980px) {
   .wind-lines-zone {
     display: none !important;
@@ -391,7 +394,7 @@ h1, h2, h3, h4, h5, h6,
   100% { transform: translateX(calc(100vw + 450px)) translateY(-20px); opacity: 0; }
 }
 
-/* ESTILIZAÇÃO E ANIMAÇÃO DOS CIFRÕES ($) ILUMINADOS FLUTUANTES */
+// ESTILIZAÇÃO E ANIMAÇÃO DOS CIFRÕES ($) ILUMINADOS FLUTUANTES
 .particle {
   position: absolute;
   display: flex;
@@ -470,7 +473,7 @@ color: #01ffff;
   animation: pulseOrb 3.9s ease-in-out infinite alternate 0.7s;
 }
 
-/* ESFERAS COM BRILHO AMBIENTE EXPANSIVO (ORBS) */
+// ESFERAS COM BRILHO AMBIENTE EXPANSIVO (ORBS)
 .glowing-orb {
   position: absolute;
   border-radius: 50%;
@@ -562,6 +565,7 @@ color: #01ffff;
   50% { transform: scale(1.25) translate(20px, -15px); opacity: 0.7; }
   100% { transform: scale(-15px, 15px); opacity: 0.4; }
 }
+*/
 
 .hero-wave {
   display: none !important;
@@ -748,6 +752,181 @@ color: #01ffff;
   color: #ffffff;
   text-shadow: 0 0 8px rgba(0, 188, 255, 0.8);
   
+}
+
+/* ==========================================================================
+   DASHBOARD PRINCIPAL UNIFICADO E AUTO-ORGANIZÁVEL (NOTEBOOK, TABLET E CELULAR)
+   Sem barra de rolagem em notebook e tablet, mantendo alinhamento perfeito
+   ========================================================================== */
+.main-dashboard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(14px, 2.5vh, 26px) 16px;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(360px, 1.15fr);
+  gap: 22px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.dashboard-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+}
+
+.dashboard-col-left {
+  justify-content: stretch;
+}
+
+.dashboard-col-left .hero-glass-box-subtle {
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(20px, 2.6vw, 32px);
+  box-sizing: border-box;
+}
+
+.dashboard-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.dashboard-col-right .buttons-stack-area {
+  margin: 0;
+  gap: 12px;
+  width: 100%;
+}
+
+.dashboard-col-right .system-help-menu-btn {
+  max-width: 100%;
+  padding: clamp(12px, 1.8vh, 18px) clamp(16px, 2vw, 24px);
+  gap: 14px;
+}
+
+.dashboard-col-right .quick-portals-area {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.dashboard-col-right .site-app-install-area {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* ==========================================================================
+   MODO CELULAR / TELAS ESTREITAS (< 901px): COLUNA ÚNICA COM ROLAGEM NORMAL
+   ========================================================================== */
+@media (max-width: 900px) {
+  .main-dashboard {
+    display: block;
+    padding: 16px 12px 36px 12px;
+  }
+
+  .dashboard-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .dashboard-col-left .hero-glass-box-subtle {
+    height: auto;
+    padding: 18px 16px;
+    margin: 0 auto;
+  }
+
+  .dashboard-col-right {
+    gap: 14px;
+  }
+
+  .dashboard-col-right .buttons-stack-area {
+    gap: 14px;
+  }
+}
+
+/* ==========================================================================
+   OTIMIZAÇÃO PARA NOTEBOOKS E TABLETS COM ALTURA REDUZIDA (<= 768px)
+   ========================================================================== */
+@media (min-width: 901px) and (max-height: 768px) {
+  .app-header {
+    padding: 8px 0;
+  }
+
+  .main-dashboard {
+    padding: 8px 16px;
+  }
+
+  .dashboard-grid {
+    gap: 14px;
+  }
+
+  .dashboard-col-left .hero-glass-box-subtle {
+    padding: 14px 20px;
+  }
+
+  .hero-clean-header {
+    margin-bottom: 8px;
+  }
+
+  .hero-clean-badge {
+    margin-bottom: 6px;
+    padding: 2px 10px;
+  }
+
+  .checklist-lines-list {
+    gap: 6px;
+  }
+
+  .chk-line-item {
+    padding: 6px 0;
+  }
+
+  .dashboard-col-right {
+    gap: 8px;
+  }
+
+  .dashboard-col-right .buttons-stack-area {
+    gap: 8px;
+  }
+
+  .dashboard-col-right .system-help-menu-btn {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+
+  .portal-link-btn {
+    padding: 8px 14px;
+    gap: 10px;
+  }
+
+  .portal-link-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .site-app-install-card {
+    padding: 4px 12px;
+  }
 }
 
 /* ==========================================================================
@@ -4642,8 +4821,139 @@ button.direct-web-link {
 }
 
 /* ==========================================================================
-   CARD EXCLUSIVO: INSTALAR O APLICATIVO DO SITE (LONGE DOS OUTROS LINKS)
+   ACESSO RÁPIDO AOS PORTAIS EXTERNOS (PORTAL RCA & SITE UNIFORT)
    ========================================================================== */
+.quick-portals-area {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto 18px auto;
+}
+
+.quick-portals-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.portal-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  background: rgba(3, 23, 61, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(0, 188, 255, 0.4);
+  border-radius: 14px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.portal-link-btn:hover {
+  border-color: rgba(0, 188, 255, 0.9);
+  background: rgba(4, 32, 85, 0.88);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 188, 255, 0.28);
+  color: #ffffff;
+}
+
+.portal-link-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.portal-icon-rca {
+  background: rgba(0, 188, 255, 0.18);
+  border: 1px solid rgba(0, 188, 255, 0.45);
+  color: #00bcff;
+}
+
+.portal-link-btn:hover .portal-icon-rca {
+  background: #00bcff;
+  color: #03173d;
+  box-shadow: 0 0 14px rgba(0, 188, 255, 0.6);
+}
+
+.portal-icon-site {
+  background: rgba(34, 197, 94, 0.18);
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  color: #22c55e;
+}
+
+.portal-link-btn:hover .portal-icon-site {
+  background: #22c55e;
+  color: #03173d;
+  box-shadow: 0 0 14px rgba(34, 197, 94, 0.6);
+}
+
+.portal-link-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.portal-link-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.portal-link-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.portal-link-url {
+  font-size: 0.78rem;
+  color: #00bcff;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.portal-link-action {
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.portal-link-btn:hover .portal-link-action {
+  color: #ffffff;
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 640px) {
+  .quick-portals-links {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .portal-link-btn {
+    padding: 10px 14px;
+  }
+}
+
 /* ==========================================================================
    BARRA COMPACTA & LIMPA: INSTALAR / ATUALIZAR O APLICATIVO
    ========================================================================== */

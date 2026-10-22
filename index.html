@@ -20,7 +20,7 @@
       window._pwaDeferredPrompt = e;
     });
   </script>
-  <link rel="stylesheet" href="styles.css?v=121">
+  <link rel="stylesheet" href="styles.css?v=125">
   <!-- Fonte Inter para tipografia moderna e legível -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,9 +32,8 @@
   <div class="site-fullscreen-bg" style="background-image: url('https://i.ibb.co/nMR9P7xc/Gemini-Generated-Image-v0lmvqv0lmvqv0lm.jpg');"></div>
   <div class="site-fullscreen-overlay"></div>
 
-  <!-- EFEITOS DE VENTO, BOLINHAS E PARTÍCULAS EM TODA A TELA -->
+  <!-- EFEITOS DE VENTO, BOLINHAS E PARTÍCULAS EM TODA A TELA (DESATIVADOS / COMENTADOS PARA MÁXIMO DESEMPENHO NO CELULAR)
   <div class="wind-particles-wrapper">
-    <!-- FEIXES DE LUZ HORIZONTAIS MASCARADOS FORA DA ÁREA DOS CARTÕES -->
     <div class="wind-lines-zone">
       <div class="wind-line line-1"></div>
       <div class="wind-line line-2"></div>
@@ -55,11 +54,11 @@
     <div class="particle p11">.</div>
     <div class="particle p12">.</div>
 
-    <!-- ESFERAS ILUMINADAS DE AMBIENTE -->
     <div class="glowing-orb orb-1"></div>
     <div class="glowing-orb orb-2"></div>
     <div class="glowing-orb orb-3"></div>
   </div>
+  -->
 
   <!-- CABEÇALHO PRINCIPAL INSTITUCIONAL COM ACESSO WEB E DOWNLOADS -->
   <header class="app-header">
@@ -120,19 +119,18 @@
     </div>
   </header>
 
-  <!-- HERO BANNER PONTA A PONTA COM EFEITO FROSTED GLASS -->
-  <section class="full-bleed-banner">
-    <div class="wind-hero-banner">
-      <!-- PAINEL DE VIDRO COM LISTA LINHA POR LINHA -->
-      <div class="container hero-content-container">
+  <!-- SEÇÃO PRINCIPAL UNIFICADA E RESPONSIVA (GRID AUTO-ORGANIZÁVEL PARA NOTEBOOK, TABLET E CELULAR) -->
+  <main class="main-content container main-dashboard">
+    <div class="dashboard-grid">
+      <!-- COLUNA DA ESQUERDA: RECOMENDAÇÃO INICIAL / CHECKLIST -->
+      <div class="dashboard-col dashboard-col-left">
         <div class="hero-glass-box-subtle">
-          <!-- CABEÇALHO DA RECOMENDAÇÃO CENTRALIZADO -->
+          <!-- CABEÇALHO DA RECOMENDAÇÃO -->
           <div class="hero-clean-header">
             <div class="hero-clean-badge">
               RECOMENDAÇÃO INICIAL
             </div>
             <h2>Como verificar e atualizar o aplicativo</h2>
-             <!-- <p><strong>Importante:</strong> Antes de prosseguir, verifique se o dispositivo está conectado à internet e certifique-se de que o modo avião esteja desativado</p> -->
           </div>
 
           <!-- LISTA POR LINHA SEPARADA POR LINHAS DIVISÓRIAS -->
@@ -152,84 +150,134 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- SEÇÃO PRINCIPAL - BOTÕES DESTACADOS: TREINAMENTOS E CATÁLOGO DE DIAGNÓSTICOS -->
-  <main class="main-content container">
-    <div class="menu-trigger-area buttons-stack-area">
-      <!-- 1. BOTÃO DE TREINAMENTOS & AVALIAÇÃO EAD -->
-      <button class="system-help-menu-btn video-menu-btn training-menu-btn" id="openVideoCategoriesModalBtn" title="Abrir Central de Treinamentos & EAD">
-        <div class="menu-btn-icon video-btn-icon training-btn-icon">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-          </svg>
-        </div>
-        <div class="menu-btn-content">
-          <span class="menu-btn-badge training-badge">CAPACITAÇÃO & APRENDIZADO</span>
-          <span class="menu-btn-title">Treinamentos</span>
-          <span class="menu-btn-desc">Vídeos tutoriais por setor e avaliações EAD com envio rápido</span>
-        </div>
-        <div class="menu-btn-arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </div>
-      </button>
-
-      <!-- 2. BOTÃO DO CATÁLOGO DE DIAGNÓSTICOS DO SISTEMA -->
-      <button class="system-help-menu-btn" id="openMenuModalBtn" title="Abrir Lista de Mensagens e Ajuda">
-        <div class="menu-btn-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            <line x1="9" y1="9" x2="15" y2="9"></line>
-            <line x1="9" y1="13" x2="13" y2="13"></line>
-          </svg>
-        </div>
-        <div class="menu-btn-content">
-          <span class="menu-btn-badge">CATÁLOGO DE DIAGNÓSTICOS</span>
-          <span class="menu-btn-title">Mensagens / Ajuda do Sistema</span>
-          <span class="menu-btn-desc">Acesso às opções (23 opções)</span>
-        </div>
-        <div class="menu-btn-arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </div>
-      </button>
-    </div>
-
-    <!-- BARRA COMPACTA & LIMPA: INSTALAR / ATUALIZAR O APLICATIVO -->
-    <div class="site-app-install-area" id="siteAppInstallArea">
-      <div class="site-app-install-card">
-        <div class="site-app-icon-wrap">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-            <line x1="12" y1="18" x2="12.01" y2="18"></line>
-          </svg>
-        </div>
-        <div class="site-app-text">
-          <span class="site-app-title">Aplicativo Universidade Unifort</span>
-          <span class="site-app-desc">— Acesso rápido no celular e computador</span>
-        </div>
-        <div class="site-app-actions">
-          <button type="button" class="btn-install-site-app" id="pwaInstallBtn" title="Instalar aplicativo no seu dispositivo">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            <span>Instalar App</span>
+      <!-- COLUNA DA DIREITA: TREINAMENTOS, CATÁLOGO, PORTAIS E INSTALAR APP -->
+      <div class="dashboard-col dashboard-col-right">
+        <div class="menu-trigger-area buttons-stack-area">
+          <!-- 1. BOTÃO DE TREINAMENTOS & AVALIAÇÃO EAD -->
+          <button class="system-help-menu-btn video-menu-btn training-menu-btn" id="openVideoCategoriesModalBtn" title="Abrir Central de Treinamentos & EAD">
+            <div class="menu-btn-icon video-btn-icon training-btn-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="menu-btn-content">
+              <span class="menu-btn-badge training-badge">CAPACITAÇÃO & APRENDIZADO</span>
+              <span class="menu-btn-title">Treinamentos</span>
+              <span class="menu-btn-desc">Vídeos tutoriais por setor e avaliações EAD com envio rápido</span>
+            </div>
+            <div class="menu-btn-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
           </button>
-          <button type="button" class="btn-uninstall-site-app" id="pwaUninstallBtn" title="Desinstalar o aplicativo da máquina" style="display: none;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="3 6 5 6 21 6"></polyline>
-              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-            </svg>
-            <span>Desinstalar</span>
+
+          <!-- 2. BOTÃO DO CATÁLOGO DE DIAGNÓSTICOS DO SISTEMA -->
+          <button class="system-help-menu-btn" id="openMenuModalBtn" title="Abrir Lista de Mensagens e Ajuda">
+            <div class="menu-btn-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                <line x1="9" y1="9" x2="15" y2="9"></line>
+                <line x1="9" y1="13" x2="13" y2="13"></line>
+              </svg>
+            </div>
+            <div class="menu-btn-content">
+              <span class="menu-btn-badge">CATÁLOGO DE DIAGNÓSTICOS</span>
+              <span class="menu-btn-title">Mensagens / Ajuda do Sistema</span>
+              <span class="menu-btn-desc">Acesso às opções (23 opções)</span>
+            </div>
+            <div class="menu-btn-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
           </button>
-          <button type="button" class="btn-close-site-app" id="pwaDismissBtn" title="Ocultar esta barra">&times;</button>
+        </div>
+
+        <!-- ACESSO AOS PORTAIS EXTERNOS: PORTAL RCA E SITE UNIFORT -->
+        <div class="quick-portals-area">
+          <div class="quick-portals-links">
+            <!-- LINK 1: ACESSO AO PORTAL RCA -->
+            <a href="https://unifort-ltda.github.io/portal-rca-unifort/#" target="_blank" rel="noopener noreferrer" class="portal-link-btn" title="Acessar Portal RCA Unifort">
+              <div class="portal-link-icon portal-icon-rca">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="portal-link-info">
+                <span class="portal-link-title">Acesso ao Portal RCA</span>
+                <span class="portal-link-url">Ferramentas e performance comercial</span> 
+              </div>
+              <div class="portal-link-action">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+            </a>
+
+            <!-- LINK 2: SITE UNIFORT -->
+            <a href="https://unifort.com.br/" target="_blank" rel="noopener noreferrer" class="portal-link-btn" title="Acessar Site Institucional Unifort">
+              <div class="portal-link-icon portal-icon-site">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div class="portal-link-info">
+                <span class="portal-link-title">Site Unifort</span>
+                <span class="portal-link-url">Institucional</span>
+              </div>
+              <div class="portal-link-action">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- BARRA COMPACTA & LIMPA: INSTALAR / ATUALIZAR O APLICATIVO -->
+        <div class="site-app-install-area" id="siteAppInstallArea">
+          <div class="site-app-install-card">
+            <div class="site-app-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <div class="site-app-text">
+              <span class="site-app-title">Aplicativo Universidade Unifort</span>
+              <span class="site-app-desc">— Acesso rápido no celular e computador</span>
+            </div>
+            <div class="site-app-actions">
+              <button type="button" class="btn-install-site-app" id="pwaInstallBtn" title="Instalar aplicativo no seu dispositivo">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Instalar App</span>
+              </button>
+              <button type="button" class="btn-uninstall-site-app" id="pwaUninstallBtn" title="Desinstalar o aplicativo da máquina" style="display: none;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                </svg>
+                <span>Desinstalar</span>
+              </button>
+              <button type="button" class="btn-close-site-app" id="pwaDismissBtn" title="Ocultar esta barra">&times;</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -800,6 +848,6 @@
   <!-- CONTAINER DE TOASTS DE NOTIFICAÇÃO PWA -->
   <div id="toastContainer" class="toast-container"></div>
 
-  <script src="app.js?v=121"></script>
+  <script src="app.js?v=125"></script>
 </body>
 </html>
