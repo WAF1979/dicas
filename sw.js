@@ -3,7 +3,7 @@
  * Suporte completo a Progressive Web App (PWA), atualizações automáticas e funcionamento offline
  */
 
-const CACHE_NAME = 'tutorial-app-v1792779698';
+const CACHE_NAME = 'tutorial-app-v1792784246';
 const STATIC_ASSETS = [
   './',
   './index.html',
