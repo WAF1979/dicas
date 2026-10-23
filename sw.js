@@ -3,7 +3,7 @@
  * Suporte completo a Progressive Web App (PWA), atualizações automáticas e funcionamento offline
  */
 
-const CACHE_NAME = 'tutorial-app-v127';
+const CACHE_NAME = 'tutorial-app-v1792779698';
 const STATIC_ASSETS = [
   './',
   './index.html',
@@ -12,6 +12,8 @@ const STATIC_ASSETS = [
   './app.js',
   './manifest.json',
   './unifort_hotsales_banner.png',
+  './assets/brand_unifort_icon.png',
+  './assets/brand_unifort_text_logo.png',
   './favicon.ico',
   './favicon.png',
   './assets/modo_aviao_status.png',
@@ -27,7 +29,9 @@ const STATIC_ASSETS = [
   './assets/icons/icon-512x512.png',
   './assets/icons/icon-maskable-192x192.png',
   './assets/icons/icon-maskable-512x512.png',
-  './assets/icons/apple-touch-icon.png'
+  './assets/icons/apple-touch-icon.png',
+  './icon-192x192.png',
+  './icon-512x512.png'
 ];
 
 // Listener para forçar ativação imediata sob demanda (skipWaiting)
@@ -80,6 +84,22 @@ self.addEventListener('fetch', (event) => {
 
   // Não intercepta chamadas diretas externas do sistema HotSales
   if (url.hostname.includes('hotsales.com.br')) {
+    return;
+  }
+
+  // Ícone da marca institucional: Network-First (reflete mudanças e personalizações imediatamente)
+  if (url.pathname.includes('brand_unifort')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const responseClone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
+          }
+          return networkResponse;
+        })
+        .catch(() => caches.match(event.request))
+    );
     return;
   }
 

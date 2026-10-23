@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidade Fort</title>
+    <style>
+        body {
+            /* Fundo escuro apenas para dar contraste com o contorno branco do logo */
+            background-color: #333;
+
+        }
+
+        .unifort {
+            display: flex;
+            align-items: flex-end;
+            /* Aplica o contorno branco em volta de todos os textos */
+            color: rgb(245, 245, 245);
+            width: 10%;
+            height:10%
+            
+        }
+
+        .texto-contorno {
+ 
+            -webkit-text-stroke: 0.3px white;
+
+        }
+
+        .uni {
+            font-size: 110px;
+            color: #002b5c; /* Azul Escuro */
+            margin: 0;
+            line-height: 0.75;
+            letter-spacing: -1px;
+            transform: scaleY(1.1); /* Deixa a fonte ligeiramente mais alta */
+        }
+
+        .subunifort {
+            display: flex;
+            flex-direction: column;
+            margin-left: 2px; /* Puxa o texto para perto do "UNI" */
+            margin-bottom: -5px;
+        }
+
+        .versidade {
+            font-size: 34px;
+            color: #ebeef1; /* Azul Escuro */
+            margin: 0;
+            line-height: 0.8;
+            letter-spacing: 1px;
+            margin-bottom: -5px; /* Aproxima da palavra "fort" */
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 100;
+        }
+
+        .fort {
+            font-size: 85px;
+            color: #638345; /* Verde Oliva */
+            margin: 0;
+            line-height: 0.75;
+            letter-spacing: -1px;
+            padding-top: 10px;            
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="fontes">
+        <div class="unifort">
+            <h1 class="uni texto-contorno">UNI</h1>
+            <div class="subunifort">
+                <h6 class="versidade texto-contorno">versidade</h6>
+                <!-- A imagem utiliza 'fort' em letras minúsculas -->
+                <h6 class="fort texto-contorno">fort</h6> 
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
