@@ -478,7 +478,7 @@ const HELP_DATA = [
     previewType: 'order-status-preview',
     problemNotice: 'Pedido retido para análise .',
     causes: [
-      'Cliente pode está com alguma situação irregular que precisa ser analisada pelo setor responsável.'
+      'Cliente pode estar com alguma situação irregular que precisa ser analisada pelo setor responsável.'
     ],
     suggestions: [
       '**Aguardar a analise** realizada pelo setor responsavel.',
