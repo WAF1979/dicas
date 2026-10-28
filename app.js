@@ -215,7 +215,8 @@ const HELP_DATA = [
     ],
     suggestions: [
       '**Fechar o aplicativo e abrir novamente.**',
-      '**Verificar versão do aplicativo** na loja de apps (Play Store ou App Store) e atualizar se necessário.',
+      '**Verificar versão do aplicativo**, se necessário atualizar na loja de apps [Play Store](https://play.google.com/store/apps/details?id=br.com.dynamicssales.dynamicssales&pcampaignid=web_share) ou [App Store](https://apps.apple.com/br/app/hotsales/id1413947343).',
+       '**Desinstala e instala o aplicativo novamente.Esse procedimento ajuda a limpar os arquivos temporários e corrigir possíveis falhas no funcionamento do aplicativo.',
       '**Limpeza de cache e dados**, nas configurações do aparelho (liberando espaço na memória interna) ([Como fazer a limpeza de cache](#cache-cleanup-guide)).'
     ],
     showStoreBanner: true,
@@ -263,6 +264,7 @@ const HELP_DATA = [
     suggestions: [
       '**Fechar o aplicativo e abrir novamente.**',
       '**Verificar versão do aplicativo**, se necessário atualizar na loja de apps [Play Store](https://play.google.com/store/apps/details?id=br.com.dynamicssales.dynamicssales&pcampaignid=web_share) ou [App Store](https://apps.apple.com/br/app/hotsales/id1413947343).',
+      '**Desinstala e instala o aplicativo novamente.Esse procedimento ajuda a limpar os arquivos temporários e corrigir possíveis falhas no funcionamento do aplicativo.',
       '**Limpeza de cache e dados**, nas configurações do aparelho ([Como fazer a limpeza de cache](#cache-cleanup-guide)).',
       'Em caso de urgência, acesse. [Site HotSales](https://webunifort.hotsales.com.br/#/login), **Atenção**: o sinal fraco também afeta o acesso pelo site. Em regiões com instabilidade, deixe o aplicativo no modo offline antes de sair.'
     ],
